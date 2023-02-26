@@ -35,37 +35,35 @@
 <br/>
 <h2>Bitwise Operators</h2>
 <ul>
-  <li>
-    - AND
-    - OR
-    - XOR
-    - NOT : an integer is 4 byte in cpp, ie 32 bits
-            not operator inverts the bits 0->1 , 1->0 
-            Ex. 2- 10 
-                ~2=111111111111111111111111111111101
+  <li>- AND 
+      - OR
+      - XOR 
+      - NOT : an integer is 4 byte in cpp, ie 32 bits
+              not operator inverts the bits 0->1 , 1->0 
+              Ex. 2- 10 
+                  ~2=111111111111111111111111111111101
 
-              Now to print: Compiler checks the last bit and finds it is negative, therefore it displays the 2's compliment
+                Now to print: Compiler checks the last bit and finds it is negative, therefore it displays the 2's compliment
 
-                   000000000000000000000000000000010
-                                                +  1
-                   000000000000000000000000000000011 which is 3, so the compiler displays -3 as answer
+                    000000000000000000000000000000010
+                                                  +  1
+                    000000000000000000000000000000011 which is 3, so the compiler displays -3 as answer
+ 
+      - SHIFT OPERATORS
+            Note: when number is small left shifting is multiplying by 2, BUT for lager numbers like 
+            010000000000000000000000000000010 , now left shifting to a bit will make it negative
+<b>
+            Note: For positive numbers always the padding is with 0's BUT for  negative numbers padding is compiler dependent</b>   
+<b>
+      Genral note: 
+      -  an int/int always gives an int as answer </b>
 
-    - SHIFT OPERATORS
-          Note: when number is small left shifting is multiplying by 2, BUT for lager numbers like 
-          010000000000000000000000000000010 , now left shifting to a bit will make it negative
-
-          Note: For positive numbers always the padding is with 0's BUT for <b>negative numbers padding is compiler dependent</b>   
-
-
-    Genral note: 
-    - <b>an int/int always gives an int as answer</b>
-
-    FOR LOOP FLOW: 
-      - The initialization statement is executed first is and is executed only once per loop
-      - The condition is checked 
-      - The body is executed 
-      - then updation statement is executed 
-      - then condition is checked and so on.                                    
+      FOR LOOP FLOW: 
+        - The initialization statement is executed first is and is executed only once per loop
+        - The condition is checked 
+        - The body is executed 
+        - then updation statement is executed 
+        - then condition is checked and so on.                                    
   </li>
 </ul>
 <h2>Precedence of operators</h2>
