@@ -54,6 +54,14 @@
           Note: when number is small left shifting is multiplying by 2, BUT for lager numbers like 
           010000000000000000000000000000010 , now left shifting to a bit will make it negative
 
-          Note: For positive numbers always the padding is with 0's BUT for <b>negative numbers padding is compiler dependent</b>                                        
+          Note: For positive numbers always the padding is with 0's BUT for <b>negative numbers padding is compiler dependent</b>   
+
+
+    Genral note: FOR LOOP FLOW: 
+      - The initialization statement is executed first is and is executed only once per loop
+      - The condition is checked 
+      - The body is executed 
+      - then updation statement is executed 
+      - then condition is checked and so on.                                    
   </li>
 </ul>
