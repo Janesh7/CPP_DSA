@@ -57,7 +57,10 @@
           Note: For positive numbers always the padding is with 0's BUT for <b>negative numbers padding is compiler dependent</b>   
 
 
-    Genral note: FOR LOOP FLOW: 
+    Genral note: 
+    - <b>an int/int always gives an int as answer</b>
+
+    FOR LOOP FLOW: 
       - The initialization statement is executed first is and is executed only once per loop
       - The condition is checked 
       - The body is executed 
@@ -65,3 +68,5 @@
       - then condition is checked and so on.                                    
   </li>
 </ul>
+<h2>Precedence of operators</h2>
+  <img src="precedence.png" />
