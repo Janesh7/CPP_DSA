@@ -1,4 +1,4 @@
-<h6>Pseudo code</h6>
+<h2>Pseudo code</h2>
 <ul>
   <li>
     <b>FlowChart:</b> It is visual representation of program using diagrams amd shapes having a fixed meaning.<br/>
@@ -22,7 +22,7 @@
 <br/>
 <h6>********************************************</h6>
 <br/>
-<h6>Pattern in cpp</h6>
+<h2>Pattern in cpp</h2>
 <ul>
   <li>
      - <b>First analyse the pattern</b>, see the number of rows and the characters how its printing in what pattern<br />
@@ -30,4 +30,30 @@
      - Check all iterations<br/>
      - Code while loops, dont forget to add base statements <br/>
 
+<br/>
+<h6>********************************************</h6>
+<br/>
+<h2>Bitwise Operators</h2>
+<ul>
+  <li>
+    - AND
+    - OR
+    - XOR
+    - NOT : an integer is 4 byte in cpp, ie 32 bits
+            not operator inverts the bits 0->1 , 1->0 
+            Ex. 2- 10 
+                ~2=111111111111111111111111111111101
 
+              Now to print: Compiler checks the last bit and finds it is negative, therefore it displays the 2's compliment
+
+                   000000000000000000000000000000010
+                                                +  1
+                   000000000000000000000000000000011 which is 3, so the compiler displays -3 as answer
+
+    - SHIFT OPERATORS
+          Note: when number is small left shifting is multiplying by 2, BUT for lager numbers like 
+          010000000000000000000000000000010 , now left shifting to a bit will make it negative
+
+          Note: For positive numbers always the padding is with 0's BUT for <b>negative numbers padding is compiler dependent</b>                                        
+  </li>
+</ul>
