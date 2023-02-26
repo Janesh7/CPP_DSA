@@ -13,13 +13,13 @@ int main()
     cout << endl;
     cout << "Select which pattern you want to print from below list:\n";
     cout << endl;
-    cout << "1. Inverted & Reverse Same Number Triangle Pattern (H.W-1)." << endl;
+    cout << "1. Inverted & Reverse Same Number Triangle Pattern." << endl;
     cout << endl;
-    cout << "2. Inverted Same Number Triangle Pattern (H.W-2)." << endl;
+    cout << "2. Inverted Same Number Triangle Pattern." << endl;
     cout << endl;
-    cout << "3. Inverted Continuous Number Triangle Pattern (H.W-3)." << endl;
+    cout << "3. Inverted Continuous Number Triangle Pattern." << endl;
     cout << endl;
-    cout << "4. Inverted & Reverse Number Triangle Pattern (H.W-4)." << endl;
+    cout << "4. Inverted & Reverse Number Triangle Pattern." << endl;
     cout << endl;
     cin >> no_of_pattern;
     cout << endl;
