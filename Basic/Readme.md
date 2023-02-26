@@ -1,11 +1,11 @@
 <h6>Pseudo code</h6>
 <ul>
   <li>
-    <b><u>FlowChart:</u></b> It is visual representation of program using diagrams amd shapes having a fixed meaning.<br/>
+    <b>FlowChart:</b> It is visual representation of program using diagrams amd shapes having a fixed meaning.<br/>
     Example : In a flow chart the <b>Eclipse</b> denotes the starting and end of the program.<br/>
-    <b><u>Parallelogram</u></b> denotes the input or output statement. <br/>
-    <b><u>Rectangle</u></b> denotes the calculation or some arthimatic operations.<br />
-    <b><u>Rhombus</u></b> denotes the decision or comparison, etc.<br />
+    <b>Parallelogram</b> denotes the input or output statement. <br/>
+    <b>Rectangle</b> denotes the calculation or some arthimatic operations.<br />
+    <b>Rhombus</b> denotes the decision or comparison, etc.<br />
     <b>Note : There is no symbol or shape for loops but decision shape can be used to make loop.</b> <br />
     <img src="flowchart.png" />
   </li>
@@ -26,7 +26,7 @@
 <ul>
   <li>
      - <b>First analyse the pattern</b>, see the number of rows and the characters how its printing in what pattern<br />
-     - <b><u>Create a EQUATION (relation)</b> between the number of columns using the number of rows</u> <br/>
+     - <b>Create a EQUATION (relation)</b> between the number of columns using the number of rows <br/>
      - Check all iterations<br/>
      - Code while loops, dont forget to add base statements <br/>
 
