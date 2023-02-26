@@ -69,4 +69,8 @@
   </li>
 </ul>
 <h2>Precedence of operators</h2>
+<ul>
+  <li>
   <img src="precedence.png" />
+  </li>
+</ul>
