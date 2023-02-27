@@ -33,7 +33,7 @@ int main()
         int j=31;   // Length of the array
         while (n != 0)
         {
-
+            // 2's comp- From lsb take 0's as it is till the first 1, after that invert every bit
             int bit = n & 1;
             int nbit = bit^1;  // XOR Operation to NEGATE the bit
             if (nbit && flag)   // Runs each time till the bits from LSB are 0's 
