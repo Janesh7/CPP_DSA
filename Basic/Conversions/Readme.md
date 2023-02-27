@@ -40,4 +40,4 @@ Better ALgo as for code below
 -     bit = n&1 ie bitwise AND to each bit gives the same bit
 -     ans = 10^i*bit + answer
 
-NOTE : The answer is in int for very big int conversion this would give error as its range is between [2^31,2^31 -1] thasts why use string 
+NOTE : The answer is in int for very big int conversion this would give error as its range is between [2^31,2^31 -1] thats why use string 
