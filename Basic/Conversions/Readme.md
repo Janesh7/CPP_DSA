@@ -36,8 +36,19 @@ Basic Algo
 ## Optimized Logic
 
 Better ALgo as for code below
-- while neq 0
+- i for tracking bit number
+- while n neq 0
 -     bit = n&1 ie bitwise AND to each bit gives the same bit
 -     ans = 10^i*bit + answer
 
 NOTE : The answer is in int for very big int conversion this would give error as its range is between [2^31,2^31 -1] thats why use string 
+
+# Binary To Decimal
+
+Similar to the previous one
+NOTE: We r taking an intger as input (and not a binary as prev) therefore we'll be using divide(not shift) and modulus to get the digit
+- i for tracking bit number
+- while n neq 0
+-   digit = n mod 10
+-   if the digit is 1, add 2^i to the answer
+-   n=n\10 implicitly converts to integer
