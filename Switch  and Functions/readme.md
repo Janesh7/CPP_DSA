@@ -7,5 +7,9 @@ Few points to  note :
 # Function
 w/o funtion : bulky,buggy,not readable
 
+- Function Call Stack
+
 <br />
 nCr = n!/(r!*(n-r)!)
+<br />
+- set bits: means the nummber of bits 1 in the binary rep
