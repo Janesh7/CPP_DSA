@@ -52,3 +52,7 @@ NOTE: We r taking an intger as input (and not a binary as prev) therefore we'll 
 -   digit = n mod 10
 -   if the digit is 1, add 2^i to the answer
 -   n=n\10 implicitly converts to integer
+<br />
+<br />
+------------------------------------------------
+IMPORTANT NOTE: In c++ u can access the min and max of the integer bound by importing the limits (#include<limits.h>) and using INT_MAX (2147483647 or 2^32) and INT_MIN (-2147484647 -1 or -2^32 -1), also note that ans*10 is what may result into overflow of an int, therefore dont use it in the condition rather use INT_MAX/10
