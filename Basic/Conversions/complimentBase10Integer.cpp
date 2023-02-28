@@ -14,7 +14,7 @@ public:
         
         while( m!=0) {
             mask = (mask << 1) | 1; // Creating a mask like 000...111 where one represents where the digits of the number are, so later it will be ANDed with the negation of the number and would give the solution without having the initial 1's(-ve number rep)
-            // mask which is initially all 0's, it is shifted left and 1 is appended as 1 OR anything is 1
+            // mask which is initially all 0's, it is shifted left(so previous changed bit is preserved) and 1 is appended as 1 OR anything is 1
             m = m >> 1; // Right shift and remove the last bit, runs till all the bits r gone .. ie the while condition
         }
         
