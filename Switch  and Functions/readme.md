@@ -6,3 +6,6 @@ Few points to  note :
 
 # Function
 w/o funtion : bulky,buggy,not readable
+
+<br />
+nCr = n!/(r!*(n-r)!)
