@@ -21,4 +21,5 @@ int main()
         cout << "Number of 1 rupee coins:" << n / 1 << endl;
         n %= 1;
     }
+    return 0;
 }
