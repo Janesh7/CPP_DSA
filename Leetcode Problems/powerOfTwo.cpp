@@ -7,17 +7,16 @@ class Solution {
 public:
     bool isPowerOfTwo(int n) {
         
-        int ans = 1;
-        
-        for(int i = 0; i <= 30; i++) {
+        int ans = 1; //for i=0
+        // Using a simple brute force method - calculating all the powers of 2 (from 0 to 31 (max int range)) and comparing with the given number 
+        for(int i = 0; i <= 30; i++) { // we r multiplying at last so only till 30 so 2^31 is calculated
             
-            //cout<<" ans "<<ans <<endl;
-            if(ans == n)
+            if(ans == n) // if the calculated 2 power is equal to the number
             {
                 return true;
             }
-            if(ans < INT_MAX/2)
-            ans = ans * 2;   
+            if(ans < INT_MAX/2) // Check for overflow 
+            ans = ans * 2;   // Just multiply the answer with 2,( we r storing the previous answer for efficiency) rather than using pow() method
             
         }
         return false;
