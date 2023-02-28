@@ -18,7 +18,7 @@ public:
             m = m >> 1; // Right shift and remove the last bit, runs till all the bits r gone .. ie the while condition
         }
         
-        int ans = (~n) & mask;
+        int ans = (~n) & mask; // take the negation (refer Patterns/readme) we get all bits reversed but with 1's in MSB, therefore AND them with the mask
         
         return ans;
         
