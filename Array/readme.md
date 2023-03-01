@@ -11,3 +11,5 @@
 - We can initialize th earray with any value by using the fill_n command
     Ex: int array[100];
         fill_n(array,100,1); // initializes with 1
+
+- If we initialize an array with frewer values then  its size then rest of the array elements r 0s
