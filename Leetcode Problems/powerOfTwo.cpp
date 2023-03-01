@@ -1,6 +1,8 @@
 // LC prob 231 - Given an integer n, return true if it is a power of two. Otherwise, return false.
 
 // An integer n is a power of two, if there exists an integer x such that n == 2x.
+
+//Alternative easy approach: If the number of set bits in the number is 1 -> then its a power of two
 #include<limits.h>
 
 class Solution {
