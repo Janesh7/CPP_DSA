@@ -13,7 +13,9 @@
         fill_n(array,100,1); // initializes with 1
 
 - If we initialize an array with frewer values then  its size then rest of the array elements r 0s
-- Dont keep the size of the array in the function declaration : int printfunc(int arr[],int lenght){}
+- Dont keep the size of the array in the function declaration : int printfunc(int arr[],int lenght){} 
+- ^^Here we r passing the length in function coz if we have only initialized 2 elements in array of size 15,multiple 0s get printed aswell, therefore we can just send 2 as an argument
 - we can get the length of any array using sizeof():
     Ex: int lenght = sizeof(array)/sizeof(int) , 
         here we take the size of the memory location and divide it by the size of each ele, ie if array is of lenght 10, memory size:40,size of int:4
+- NOTE: initializing array like int arr[variable] is a VERY bad practise
