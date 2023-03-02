@@ -24,4 +24,5 @@
 ## Reverse an array
 
 - We r tracing(pointer) the start and end  of the array, and swapping them then incrementing start and decrermenting end. 
+- We use swap() function to swap. swap(arr[start],arr[stop]);
 - We repeat till the end < start
