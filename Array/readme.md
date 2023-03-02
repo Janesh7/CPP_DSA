@@ -20,3 +20,8 @@
         here we take the size of the memory location and divide it by the size of each ele, ie if array is of lenght 10, memory size:40,size of int:4
 - NOTE: initializing array like int arr[variable] is a VERY bad practise
 - IMP NOTE: When we update the array normally passed to the function, the changes remain throughout the program as the var passed int arr[] stores the address to the first memory location. So making changes to it will reflect in main aswell.
+
+## Reverse an array
+
+- We r tracing(pointer) the start and end  of the array, and swapping them then incrementing start and decrermenting end. 
+- We repeat till the end < start
