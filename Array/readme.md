@@ -26,3 +26,10 @@
 - We r tracing(pointer) the start and end  of the array, and swapping them then incrementing start and decrermenting end. 
 - We use swap() function to swap. swap(arr[start],arr[stop]);
 - We repeat till the end < start
+
+## Unique element of the array
+- Prob statement: Given an array,which has n elements(2m+1 elements). Where all elements appear exactly twice and there is exactly 1 elememt which appears only once .ie how 2m+1 where m is the number of duplicate elements.
+
+- optiomized solution:
+    - We kmnow that a^a = 0 ie XOR of the dsame element is always 0
+    - So if we XOR all the elements we will get the single remaining element as 0^0^0^0^a = 0^a = a, where there were 4 ele having duplicates (8 ele)which gave the result 0s upon XORing.
