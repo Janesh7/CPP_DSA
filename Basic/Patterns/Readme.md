@@ -37,7 +37,8 @@
 <ul>
   <li>- AND 
       - OR
-      - XOR 
+      - XOR :
+            - IMP NOTE: When u XOR the same elememt it always gives 0, ie for any int a, a^a = 0
       - NOT : an integer is 4 byte in cpp, ie 32 bits
               not operator inverts the bits 0->1 , 1->0 
               Ex. 2- 10 
