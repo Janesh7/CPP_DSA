@@ -28,7 +28,7 @@
 - We repeat till the end < start
 
 ## Unique element of the array
-- Prob statement: Given an array,which has n elements(2m+1 elements). Where all elements appear exactly twice and there is exactly 1 elememt which appears only once .ie how 2m+1 where m is the number of duplicate elements.
+- Unique element Code Stduio Prob statement: Given an array,which has n elements(2m+1 elements). Where all elements appear exactly twice and there is exactly 1 elememt which appears only once .ie how 2m+1 where m is the number of duplicate elements.
 
 - optiomized solution:
     - We kmnow that a^a = 0 ie XOR of the dsame element is always 0
