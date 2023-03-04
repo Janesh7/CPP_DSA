@@ -9,7 +9,11 @@
 // 3. The output should be in the order of elements that occur in the original arrays.
 // 4. If there is no intersection present then return an empty array.
 
-// Basic approach:
+// Basic approach: 2 for loops find the element and replace when found so, it doesnt repeat in other iterations.
+// n*n TC 
+
+// Optimised Solution:
+//  Given the list is sorted we can run two pointers(i,j) each on an array, then we incremented pointers based on the fact that the arrays are sorted.
 
 using namespace std;
 vector<int> findArrayIntersection(vector<int> &arr1, int n, vector<int> &arr2, int m)
