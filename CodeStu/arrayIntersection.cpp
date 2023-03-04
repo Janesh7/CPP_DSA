@@ -13,6 +13,7 @@
 // n*n TC 
 
 // Optimised Solution:
+// TWO POINTER APPROACH
 //  Given the list is sorted we can run two pointers(i,j) each on an array, then we incremented pointers based on the fact that the arrays are sorted.
 
 using namespace std;
