@@ -22,7 +22,7 @@ void sortOne(int arr[], int n) {
             right--;
         }
 
-        //agar yha pohoch gye ho, iska matlab
+        //if reached till here means
         //arr[left]==1 and arr[right]==0
         if(left<right)
         {
