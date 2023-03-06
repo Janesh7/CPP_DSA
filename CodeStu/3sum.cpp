@@ -15,7 +15,7 @@
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
-// My approach:
+// My approach: Having some issues in 1 case where an element (ie 0) which is not present in ^ in somehow considered and (0,2,10) is shown as an extra answer for it,whereas that is not shown in personal compiler
 vector<vector<int>> Threesum(vector<int> arr, int n, int s)
 {
     vector<vector<int>> ans;
