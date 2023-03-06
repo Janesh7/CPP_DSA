@@ -1,3 +1,17 @@
+// Code Stu prob 3sum
+// You are given an array/list ARR consisting of N integers. Your task is to find all the distinct triplets present in the array which adds up to a given number K.
+// An array is said to have a triplet {ARR[i], ARR[j], ARR[k]} with sum = 'K' if there exists three indices i, j and k such that i!=j, j!=k and i!=j and ARR[i] + ARR[j] + ARR[k] = 'K'.
+
+// 1
+// 5
+// 10 5 5 5 2
+// 12
+
+// Sample Output 1:
+// 5 5 2
+// Explanation For Sample Input 1:
+// 5 5 2 is the only triplet that adds up to 15. Note that the order of the output doesn’t matter, so 5 2 5 or 2 5 5 is also acceptable.
+
 #include <iostream>
 #include <bits/stdc++.h>
 using namespace std;
