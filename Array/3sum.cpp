@@ -1,16 +1,15 @@
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-
+// My approach:
 vector< vector<int> > Threesum(vector<int>arr,int n,int s)
 {
     vector< vector <int> > ans;
     sort(arr.begin(),arr.end());
+    vector<int> a;
     for (int i = 0;i<n-2;i++)
     {
-        // && not(count(a.begin(),a.end(),arr[i])) && not(count(a.begin(),a.end(),arr[k]))
         int j=i+1,k=i+2;
-        // while (arr[i]+arr[j]+arr[k]<=s )
         while (j<n)
         {
             if (arr[i]+arr[j]+arr[k]>s)
@@ -20,12 +19,23 @@ vector< vector<int> > Threesum(vector<int>arr,int n,int s)
             }
             else if (arr[i]+arr[j]+arr[k]==s)
             {
-                vector<int> a;
-                a.push_back(arr[i]);
-                a.push_back(arr[j]);
-                a.push_back(arr[k]);
-                ans.push_back(a);
-                break;
+                vector<int> temp;
+                int flag=1;
+                temp.push_back(arr[i]);
+                temp.push_back(arr[j]);
+                temp.push_back(arr[k]);
+                for (int i=0; i<ans.size();i++)
+                    if (ans[i][0]==temp[0] && ans[i][1]==temp[1] && ans[i][2]==temp[2])
+                    {
+                        flag = 0; 
+
+                    }
+                if (not(flag)){
+                    k++;
+                    continue;
+                }
+                ans.push_back(temp);
+                continue;
             }
             else if (k<n)
             {
@@ -52,7 +62,10 @@ vector< vector<int> > Threesum(vector<int>arr,int n,int s)
 
 int main()
 {
-    vector<int> ar = {-26 ,32 ,4 ,17, -16, 18, 1, 8, 6, 8, 3, -13 };
-    vector < vector<int> > a = Threesum(ar,12,10);
+    // vector<int> ar ={9, 5, -20, -70, 2, 1, 82, 1, 4, 8, 55, -100 };
+    vector<int> ar = {10 ,5 ,5 ,5 ,2};
+    // vector<int> ar = {1,1,2,2,1,1};
+    // vector<int> ar = {-26 ,32 ,4 ,17, -16, 18, 1, 8, 6, 8, 3, -13 };
+    vector < vector<int> > a = Threesum(ar,5,12);
     return 0;
 }
