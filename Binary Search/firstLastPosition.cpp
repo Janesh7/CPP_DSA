@@ -56,6 +56,8 @@ int lastOcc(vector<int> &arr, int n, int key)
     return ans;
 }
 
+// Pair is used to connect two value pair. Its values can be used independently using the function first() and second()
+
 pair<int, int> firstAndLastPosition(vector<int> &arr, int n, int k)
 {
     pair<int, int> p;
