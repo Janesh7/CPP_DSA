@@ -19,7 +19,7 @@ For the element to be found or not found the size of the array should become 1, 
 Applications of Binary search:
 - Find lower bound
 - Find upper bound
-- Finding the number of occurence
+- Finding the number of occurence -> This can be simply done by : Upper Bound - Lower Bound + 1 ie find the first and the last occurences and then L-F+1 to get the no of occurences
 - Find Pivot element
 - Searching in rotated array
 - FInding answer by reducing the search space
