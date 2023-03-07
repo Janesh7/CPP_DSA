@@ -38,7 +38,6 @@ void sort012(int *arr, int n)
         arr[k] = 2;
 }
 
-// OPTIMISED SOLN
 
 // Dutch National Flag Algorithm to sort the array in linear time.
 
@@ -103,6 +102,8 @@ void sort012(int *arr, int n)
 // Space complexity: O(1) (only three pointers are used to keep track of indices)
 
 /*-------------------------------------------------------------------------------------*/
+
+// OPTIMISED SOLN
 
 // Same algorithm with three pointers - low, mid, and high but with SINGLE SCAN
 
