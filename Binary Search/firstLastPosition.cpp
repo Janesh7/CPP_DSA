@@ -12,7 +12,7 @@ int firstOcc(vector<int> &arr, int n, int key)
         if (arr[mid] == key)
         {
             ans = mid;
-            e = mid - 1;
+            e = mid - 1; // Dont return rather ignore the right part by this operation as we r interested in first occ coz that would be on the left side 
         }
         else if (key > arr[mid])
         { // go to Right
@@ -43,11 +43,11 @@ int lastOcc(vector<int> &arr, int n, int key)
             s = mid + 1;
         }
         else if (key > arr[mid])
-        { // Right me jao
+        { 
             s = mid + 1;
         }
         else if (key < arr[mid])
-        { // left me jao
+        { 
             e = mid - 1;
         }
 
