@@ -7,6 +7,7 @@ Time complexity :
 - whereas for b search 1000->500->250->125->62->31->15->7->3->1->0 Only 10 comparisons
 
 <br />
+IMP NOTE: If we have the largest int array possible ie from INT_MIN to INT_MAX the mid formula would become: (INT_MIN+INT_MAX)/2 which will overflow and give error hence we use a modified formula to avoid getting errors as such cases **int mid = start + (end-start)/2;** coz subtraction wouldnt overflow
 <br />
 For N elements : 1st iteration(division of array) : N/2 then N/4,N/8,N/16..... N/2^k.
 For the element to be found or not found the size of the array should become 1, therefore
