@@ -1,5 +1,5 @@
 
-// 724. Find Pivot Index
+// LC PROB 724. Find Pivot Index
 // Easy
 
 // Given an array of integers nums, calculate the pivot index of this array.
