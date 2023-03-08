@@ -21,6 +21,10 @@
 </ul>
 <br/>
 <h6>********************************************</h6>
+IMPORTANT: ADD these 3 lines to ur code for increased performance
+```ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);```
 <br/>
 <h2>Pattern in cpp</h2>
 <ul>
