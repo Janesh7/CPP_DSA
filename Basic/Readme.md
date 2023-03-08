@@ -21,7 +21,7 @@
 </ul>
 <br/>
 <h6>********************************************</h6>
-IMPORTANT: ADD these 3 lines to ur code for increased performance
+<b>IMPORTANT:</b> ADD these 3 lines to ur code for increased performance
 <b>ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);</b>
