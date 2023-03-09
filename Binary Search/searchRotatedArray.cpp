@@ -57,42 +57,29 @@ int main()
     cout << search(arr, 1);
 }
 
-class Solution
-{
+// More optimum soln
+
+class Solution {
 public:
-    int search(vector<int> &arr, int x)
-    {
-        int low = 0;
-        int n = arr.size();
-        int high = n - 1;
-        while (low <= high)
-        {
-            int mid = (low + high) / 2;
-            if (arr[mid] == x)
-            {
-                return mid;
-            }
-            if (arr[low] <= arr[mid])
-            {
-                if (x >= arr[low] && x <= arr[mid])
-                {
-                    high = mid - 1;
-                }
-                else
-                {
-                    low = mid + 1;
-                }
-            }
-            else
-            {
-                if (x >= arr[mid] && x <= arr[high])
-                {
-                    low = mid + 1;
-                }
-                else
-                {
-                    high = mid - 1;
-                }
+    int search(vector<int>& nums, int target) {
+        int n = nums.size();
+        int s = 0 , e = n-1;
+
+        while(s <= e){
+            int mid = s +(e-s)/2;
+            if(nums[mid] == target) return mid;
+            
+            //if left half is sorted 
+            if(nums[s] <= nums[mid]){
+                // check if target lies in left side
+                if(target <= nums[mid] && target >= nums[s]) e = mid-1;
+                else s = mid + 1;
+            }    
+            //if right side is sorted 
+            else{
+                // check if target lies in right side
+                if(target >= nums[mid] && target <= nums[e]) s = mid+1;
+                else e = mid-1;
             }
         }
         return -1;
