@@ -37,6 +37,8 @@ public:
 	while (s < e) // NOT LESS THAN  EQUAL TO COZ OTHERWISE IT WILL BE ITERATING OVER THE SAME ELEMENT IF = condition is there
 	{
 		if(v[mid] < v[mid+1]) //Case when mid lies in the left hand slope ie the inclined incrementing slope /
+        // since in while loop this condition helps us find s such that element next to it v[mid]>v[mid+1] ie the opposite to the above equation becomes true otherwise go to the else part and reduce the search space
+        // therefore it internally forms this eq: if v[mid-1]>v[mid] and v[mid] < v[mid+1] which is the required condition to find the peak (highest) element.
      			s=mid+1;
     		else    // Covers two cases ie when element is in the right hand slope decrementing inclined \ and the case when it could be the peak element aswell that is y no  mid-1 like the other prev prog.
       			e = mid;
