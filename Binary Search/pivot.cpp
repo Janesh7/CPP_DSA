@@ -9,11 +9,11 @@ int getPivot(int arr[], int n) {
 
     while(s<e) {
 
-        if(arr[mid] >= arr[0])
+        if(arr[mid] >= arr[0])  //Case when mid lies in the left hand slope ie the inclined incrementing slope /
         {
             s = mid+1;
         }
-        else{
+        else{ // Covers two cases ie when element is in the right hand slope decrementing inclined \ and the case when it could be the peak element aswell that is y no  mid-1 like the other prev prog.
             e = mid;
         }
         mid = s + (e-s)/2;
