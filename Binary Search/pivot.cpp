@@ -13,7 +13,7 @@ int getPivot(int arr[], int n) {
         {
             s = mid+1;
         }
-        else{ // Covers two cases ie when element is in the right hand slope decrementing inclined \ and the case when it could be the peak element aswell that is y no  mid-1 like the other prev prog.
+        else{ 
             e = mid;
         }
         mid = s + (e-s)/2;
