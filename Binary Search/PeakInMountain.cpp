@@ -43,7 +43,7 @@ public:
     
 		mid = (s + e) / 2;
 	}
-	return s; //return start
+	return s; //RETURN START OR u could even return end.. both will be same .. this is the reasaon why while (s<e) coz everytime they both will be same
     }
     int peakIndexInMountainArray(vector<int>& arr) {
         return find_pivot(arr);
