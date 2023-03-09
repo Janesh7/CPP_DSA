@@ -31,7 +31,9 @@ using namespace std;
     }
 
 double morePrecision(int n, int precision, int tempSol) {
-    
+    // brute force approach to get more precision
+    // we alr have the before decimal part, we can increament the after decimal part ,have a factor to determine the precision required 
+    //  ex we can take sqrt of 37 we will have 6 from above function we will start the bf, ie while loo
     double factor = 1;
     double ans = tempSol;
 

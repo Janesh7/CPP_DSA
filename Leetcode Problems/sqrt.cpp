@@ -26,7 +26,7 @@ using namespace std;
 class solution
 {
 public:
-    long long int sqrtInteger(int n)
+    long long int mySqrt(int n)
     {
         // using bsearch
         int s = 0;
