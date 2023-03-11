@@ -2,7 +2,7 @@
 using namespace std;
 // function to checjk if the two student book allocation is possible 
 bool isPossible(vector<int> arr, int n, int m, int mid) {
-    // m is the number of student ie 2 in our case
+    // m is the number of student ie 2 in our examples studied
     int studentCount = 1; // start with the 1st student
     int pageSum = 0;
     
@@ -24,7 +24,6 @@ bool isPossible(vector<int> arr, int n, int m, int mid) {
         if(studentCount > m) {
             return false;
         }
-        //cout << " for i " << i << " Student "<< studentCount << " pageSum " << pageSum << endl;
     }
     return true;
 }
@@ -32,24 +31,24 @@ bool isPossible(vector<int> arr, int n, int m, int mid) {
 int allocateBooks(vector<int> arr, int n, int m) {
     int s = 0;
     int sum = 0;
-    
+    //  We know that the value will always lie between 0 to the (at max) sum of all values 
+    //  hence we can apply b search to find it
     for(int i = 0; i<n; i++) {
         sum += arr[i];
     }
-    int e = sum;
+    int e = sum; // take start as 0 and end as sum
     int ans = -1;
     int mid = s + (e-s)/2;
     
     while(s<=e)
     {
         if(isPossible(arr,n,m,mid)) {
-            //cout<<" Mid returned TRUE" << endl;
-            ans = mid;
-            e = mid - 1;
+            ans = mid; // if its possible store the answer and carry on with the checking till s>e
+            e = mid - 1; // if it is possibile for mid value it is also valid for any value greater than mid and we want to neglect all those as we want the min value 
         }
         else
         {
-            s = mid + 1;
+            s = mid + 1; // not valid for mid hence(we have to increase the mid value in order to find valid values) make start to mid + 1 and check
         }
         mid = s + (e-s)/2;
     }
