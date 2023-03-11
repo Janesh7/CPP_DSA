@@ -1,3 +1,48 @@
+
+// Allocate Books
+// Medium
+
+// Problem Statement
+// Given an array ‘arr’ of integer numbers . where ‘arr[i]’ represents the number of pages in the ‘i-th’ book. There are ‘m’ number of students and the task is to allocate all the books to their students. Allocate books in such a way that:
+// 1. Each student gets at least one book.
+// 2. Each book should be allocated to a student.
+// 3. Book allocation should be in a contiguous manner.
+// You have to allocate the book to ‘m’ students such that the maximum number of pages assigned to a student is minimum.
+// Example:
+// Let’s consider ‘n=4’ (number of books ) and ‘m=2’ (number of students).
+// ‘arr = { 10, 20, 30, 40 }’.
+// subsequence
+
+// All possible way to allocate the ‘4’ books in ‘2’ number of students is -
+// 10 | 20, 30, 40 - sum of all the pages of books which allocated to student-1 is ‘10’, and student-2 is ‘20+ 30+ 40 = 90’ so maximum is ‘max(10, 90)= 90’.
+// 10, 20 | 30, 40 - sum of all the pages of books which allocated to student-1 is ‘10+ 20 = 30’, and student-2 is ‘30+ 40 = 70’ so maximum is ‘max(30, 70)= 70’.
+// 10, 20, 30 | 40 - sum of all the pages of books which allocated to student-1 is ‘10+ 20 +30 = 60’, and student-2 is ‘40’ so maximum is ‘max(60, 40)= 60’.
+// So possible maximum number of pages which allocated to a single student is { 90, 70, 60 }.
+// But you have to return a minimum of this so return ‘min(90,70,60) =60’.
+// Note:
+// 1. Do not print anything, just return the maximum number of pages that are assigned to a student is minimum.
+// 2. If it is not possible to assign the ‘n’ books to ‘m’ students then return ‘-1’.
+// Detailed explanation ( Input/output format, Notes, Constraints, Images )
+
+// Sample Input 1:
+// 4 2
+// 12 34 67 90
+// Sample Output 1:
+// 113
+// Explanation Of Sample Input 1:
+// Let’s consider ‘n=4’ (number of books ) and ‘m=2’ (number of students)
+// ‘arr = { 12, 34, 67, 90 }’. And ‘m= 2’.
+// All possible way to allocate the ‘4’ books in ‘2’ number of students is-
+
+// 12 | 34, 67, 90 - sum of all the pages of books which allocated to student 1 is ‘12’, and student two is ‘34+ 67+ 90 = 191’ so maximum is ‘max(12, 191)= 191’.
+// 12, 34 | 67, 90 - sum of all the pages of books which allocated to student 1 is ‘12+ 34 = 46’, and student two is ‘67+ 90 = 157’ so maximum is ‘max(46, 157)= 157’.
+// 12, 34, 67 | 90 - sum of all the pages of books which allocated to student 1 is ‘12+ 34 +67 = 113’, and student two is ‘90’ so maximum is ‘max(113, 90)= 113’.
+
+// So possible maximum number of pages which allocated to a single student is { 191, 157, 113 } 
+// But you have to return a minimum of this so return ‘min(191,157, 113) =113’.
+
+// Hence answer is ‘113’.
+
 #include<vector>
 using namespace std;
 // function to checjk if the two student book allocation is possible 
