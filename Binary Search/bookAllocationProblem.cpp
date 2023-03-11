@@ -13,10 +13,13 @@ bool isPossible(vector<int> arr, int n, int m, int mid) {
         else
         {
             studentCount++;  // above condition fails hence add another student 
-            if(studentCount > m || arr[i] > mid ) { // if the number of student increases than the required
-            return false;
+            if(studentCount > m || arr[i] > mid ) { // if the number of student increases than the required return false
+            //  if the next number is greater than the mid value we know above equation are going to fail always and its not possible to allocate books anymore, hence return false for that case as well
+                return false;
         }
+        // means number of students are there to allocate and it is possible to allocate the books
             pageSum = arr[i];
+            // This step is as good as pageSum = 0; pageSum += arr[i]; as the i book with arr[i] pages werent included for the previous student and hence the next valid student gets it. And then the loop continues for that student 
         }
         if(studentCount > m) {
             return false;
