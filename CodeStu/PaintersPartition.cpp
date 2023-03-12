@@ -37,6 +37,8 @@
 // 6
 
 #include<bits/stdc++.h>
+using namespace std;
+
 bool isPossible(vector<int> &boards,int mid, int k)
 {
     int painter = 1;
