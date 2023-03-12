@@ -37,20 +37,20 @@ using namespace std;
 bool isPossible(vector<int> &stalls, int k, int mid, int n) {
     
     int cowCount = 1;
-    int lastPos = stalls[0];
+    int lastPos = stalls[0]; // last pos is the left position of the cow
     
     for(int i=0; i<n; i++ ){
-        
+        //  stall[i] would show the right cow and hence distance between them is stall[i] - lastpos
         if(stalls[i]-lastPos >= mid){
             cowCount++;
-            if(cowCount==k)
+            if(cowCount==k) // if all the cows can be positioned without violating the conds we can return true
             {
                 return true;
             }
-            lastPos = stalls[i];
+            lastPos = stalls[i]; // we dont add but make the current rigth pos as the left pos for the next iteration
         }
     }
-    return false;
+    return false; // if no such position exists return true
 }
 
 int aggressiveCows(vector<int> &stalls, int k)
