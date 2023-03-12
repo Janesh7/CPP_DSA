@@ -1,0 +1,80 @@
+
+// Aggressive Cows
+
+
+// Problem Statement
+// Suggest Edit
+// You are given an array consisting of 'N' integers which denote the position of a stall. You are also given an integer 'K' which denotes the number of aggressive cows. You are given the task of assigning stalls to 'K' cows such that the minimum distance between any two of them is the maximum possible.
+// Detailed explanation ( Input/output format, Notes, Constraints, Images )
+
+// Sample Input 1 :
+// 3 2
+// 1 2 3
+// Sample Output 1 :
+// 2
+// Explanation To Sample Input 1 :
+// The largest minimum distance will be 2 when 2 cows are placed at positions {1, 3}.
+// Sample Input 2 :
+// 6 4
+// 0 3 4 7 10 9
+// Sample Output 2 :
+// 3
+// Explanation To Sample Input 2 :
+// The largest minimum distance will be 3 when 4 cows are placed at positions {0, 3, 7, 10}.
+// Sample Input 3 :
+// 5 2
+// 4 2 1 3 6
+// Sample Output 3 :
+// 5
+
+
+// IMP : *minimum* distance between any two of them is the maximum possible.
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPossible(vector<int> &stalls, int k, int mid, int n) {
+    
+    int cowCount = 1;
+    int lastPos = stalls[0]; // last pos is the left position of the cow
+    
+    for(int i=0; i<n; i++ ){
+        //  stall[i] would show the right cow and hence distance between them is stall[i] - lastpos
+        if(stalls[i]-lastPos >= mid){
+            cowCount++;
+            if(cowCount==k) // if all the cows can be positioned without violating the conds we can return true
+            {
+                return true;
+            }
+            lastPos = stalls[i]; // we dont add but make the current rigth pos as the left pos for the next iteration
+        }
+    }
+    return false; // if no such position exists return false
+}
+
+int aggressiveCows(vector<int> &stalls, int k)
+{
+    sort(stalls.begin(), stalls.end());
+   	int s = 0;
+    int n = stalls.size();
+    int e=stalls[n-1]; //largest dist stall
+    int ans = -1;
+    int mid = s + (e-s)/2;
+    
+    while(s<=e) {
+        if(isPossible(stalls, k, mid, n)) {
+            // in a *sorted* vector if n is possible than we can neglect the 0 - n values as those minimum dist between cows at stall is also possible and we only need the max value 
+            //  store the possible answer and increase the start (to increase mid valiue and check it) to mid +1
+            ans = mid;
+            s = mid + 1;
+        }
+        else
+        {
+            // if its not possible reduce the mid value by decreasing the value of end till mid -1 as we know they wont give soln either
+            e = mid - 1;
+        }
+        mid = s + (e-s)/2;
+    }
+    return ans;
+}
