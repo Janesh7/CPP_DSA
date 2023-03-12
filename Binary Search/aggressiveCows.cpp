@@ -50,7 +50,7 @@ bool isPossible(vector<int> &stalls, int k, int mid, int n) {
             lastPos = stalls[i]; // we dont add but make the current rigth pos as the left pos for the next iteration
         }
     }
-    return false; // if no such position exists return true
+    return false; // if no such position exists return false
 }
 
 int aggressiveCows(vector<int> &stalls, int k)
@@ -58,7 +58,7 @@ int aggressiveCows(vector<int> &stalls, int k)
     sort(stalls.begin(), stalls.end());
    	int s = 0;
     int n = stalls.size();
-    int e=stalls[n-1];
+    int e=stalls[n-1]; //largest dist stall
     int ans = -1;
     int mid = s + (e-s)/2;
     
