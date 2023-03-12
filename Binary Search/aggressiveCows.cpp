@@ -28,7 +28,8 @@
 // 5
 
 
-
+// IMP : *minimum* distance between any two of them is the maximum possible.
+// in a *sorted* vector if n is possi 
 #include<bits/stdc++.h>
 using namespace std;
 
