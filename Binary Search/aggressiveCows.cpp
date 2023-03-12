@@ -29,7 +29,8 @@
 
 
 // IMP : *minimum* distance between any two of them is the maximum possible.
-// in a *sorted* vector if n is possi 
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -63,11 +64,14 @@ int aggressiveCows(vector<int> &stalls, int k)
     
     while(s<=e) {
         if(isPossible(stalls, k, mid, n)) {
+            // in a *sorted* vector if n is possible than we can neglect the 0 - n values as those minimum dist between cows at stall is also possible and we only need the max value 
+            //  store the possible answer and increase the start (to increase mid valiue and check it) to mid +1
             ans = mid;
             s = mid + 1;
         }
         else
         {
+            // if its not possible reduce the mid value by decreasing the value of end till mid -1 as we know they wont give soln either
             e = mid - 1;
         }
         mid = s + (e-s)/2;

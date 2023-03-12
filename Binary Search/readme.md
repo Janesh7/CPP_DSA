@@ -25,6 +25,7 @@ Applications of Binary search:
 - FInding answer by reducing the search space
 - COW question, ROTI question, PARATA question, BOOK ALLOCATION problem
 <br />
+check while(s<e>) condition if only give few correct answer try (s<=e) may give correct answer... try based on the dry runs <-IMP 
 <br />
 ADVANCED PROMBLEMS: Used in the problems where we have to find
 <b>Minimum of all the maximums</b> in a problem like book allocation problem, painters partition, aggressive cows question etc. 
