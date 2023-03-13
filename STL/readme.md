@@ -117,11 +117,23 @@ FUNCTIONS :
 
 # Set
 - Has only unique elements
-- <b>IMPLEMENTED USING BST</b>  ;cant modify, can only delete or add new elements;
-- returns in sorted order
+- <b>IMPLEMENTED USING BST</b>  ;cant modify, can only delete or insert new elements;
+- returns in sorted increasing order
 - slower than unordered set(randomly returns ele not sorted) 
+- complexity of insertion is BigO(logn) as for the BST.
+NOTE: To create an iterator here:
+```
+set<int>::iterator it = s.begin();
+it++; // increment the iterator -> goes to the next value
+```
 <br/>
-<b>IMP NOTE</b>
+FUNCTIONS :
+
+- insert(x) 
+- 
+- find()
+
+# IMP NOTE
 <br />
 
 Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. Used as a more readable equivalent to the traditional for loop operating over a range of values, such as all elements in a container.
@@ -134,8 +146,8 @@ range_declaration :
 a declaration of a named variable, whose type is the 
 type of the element of the sequence represented by 
 range_expression, or a reference to that type.
-Often uses the auto specifier for automatic type 
-deduction.
+<b>Often uses the auto specifier for automatic type 
+deduction. </b>
 
 range_expression : 
 any expression that represents a suitable sequence 
