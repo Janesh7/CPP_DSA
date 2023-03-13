@@ -50,9 +50,10 @@ FUNCTIONS:
 # List
 Implementation is Doubly linked list
 - NO RANDOM ACCESS LIKE ARRAY, vector or deque ie have to travel to a certain element and cant go directly.
-- INITIALIZATION : list<int> l;<br/>
+- INITIALIZATION : list<int> l;list<int> l(5,100) -> create list of 5 element with each being 100<br/>
 FUNCTION
 - empty,back,begin,end -> <b>COMPLEXITY IS O(1)</b>
-- l.push_back(x)
-- l.push_front(x)
-- l.erase(beg,end) - > COMPLEXITY IS O(n)
+- size()
+- l.push_back(x),pop_back()
+- l.push_front(x),pop_front()
+- l.erase(beg,end) - > COMPLEXITY IS O(n), also l.erase(l.begin()) -> deletes one element ie the first one
