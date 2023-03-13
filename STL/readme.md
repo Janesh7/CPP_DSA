@@ -120,7 +120,7 @@ FUNCTIONS :
 - <b>IMPLEMENTED USING BST</b>  ;cant modify, can only delete or insert new elements;
 - returns in sorted increasing order
 - slower than unordered set(randomly returns ele not sorted) 
-- complexity of insertion is BigO(logn) as for the BST.
+- complexity of insertion,find,erase,count is BigO(logn) as for the BST.
 NOTE: To create an iterator here:
 ```
 set<int>::iterator it = s.begin();
@@ -130,8 +130,32 @@ it++; // increment the iterator -> goes to the next value
 FUNCTIONS :
 
 - insert(x) 
-- 
-- find()
+- erase(),size,empty
+<b>
+- count() -> 0 if not there ,1 otherwise (set has uniq ele)
+- find() -> if an element then it returns the iterator of the found element
+</b>
+
+# Map
+- key value pairs
+- uniq key
+- sorted for ordered 
+- INITIALIZATION: 
+```map<int,string> a; 
+   a[1] = "kumar";
+```
+- To print keys:
+```
+    for (auto i : a)
+        cout<<i.first; // NO PARATHENSIS
+```
+<br />
+Functions:
+- a.insert(2,"anything");
+- a.count(2), find;
+- a.erase(key)
+- Complexity is O(logn) for all above ops
+
 
 # IMP NOTE
 <br />
