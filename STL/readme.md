@@ -67,3 +67,15 @@ FUNCTION
 - l.push_back(x),pop_back()
 - l.push_front(x),pop_front()
 - l.erase(beg,end) - > COMPLEXITY IS O(n), also l.erase(l.begin()) -> deletes one element ie the first one
+
+# Array
+- LAST IN FIRST OUT (LIFO)
+- inistailization : stack<string> s;
+<br/>
+FUNCTIONS:
+
+- push(x)
+- top()
+- size , empty
+
+# Queue
