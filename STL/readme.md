@@ -21,3 +21,4 @@ can include<array>
     v.back() -> returns last element, 
     <b>v.pop_back() -> Pops the last element inserted </b>
     <b>v.clear() -> makes the size of the v to 0 BUT NOT CAPACITY</b>
+    <b>v.begin() -> returns a iterator from the beginning of the vector</b>
