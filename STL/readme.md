@@ -97,7 +97,14 @@ FUNCTIONS:
                     priority_queue<int, vector<int>, greater<int> > mini; // creates a min heap 
   </b>
   <br />
+NOTE: just for proof of concept he printed and poped the element using the code
+    int n = maxi.size();
+    for (int i= 0;i<n;i++) {
+        cout<<maxi.top();
+        maxi.pop();
+    }
 
+Here we directly put maxi.size() in loop as we r poping in the same loop aswell which would change the size of q with each iteration and would give faulty error 
 FUNCTIONS :
 
 - push(x)
