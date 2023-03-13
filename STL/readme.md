@@ -5,10 +5,19 @@ Standard template library
 
 <b>Conatiners</b>
 
-- Sequence containers [ Array , Vector , Deque , List ]
+- Sequence containers [ Array , Vector , Deque , List , (Forward List)]
 - Container Adaptors [ Stack , Queue , Priority Q ]
 - Associative Containers [ Set , Map ,(MultiSet , MultiMAp)]
 - Unordered Associative [ Unordered ""]
+
+<br />
+<b>Algorithms</b>
+
+- Bsearch
+- Lowe/Upper bound
+- min/max
+- reverse/rotate
+- sort/swap,etc
 
 # Array 
 can include<array>
