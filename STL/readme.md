@@ -57,7 +57,8 @@ FUNCTIONS:
 # List
 Implementation is Doubly linked list
 - NO RANDOM ACCESS LIKE ARRAY, vector or deque ie have to travel to a certain element and cant go directly.
-- INITIALIZATION : list<int> l;list<int> l(5,100) -> create list of 5 element with each being 100<br/>
+- INITIALIZATION : list<int> l;list<int> l(5,100) -> create list of 5 element with each being 100
+<br/>
 
 FUNCTION
 
