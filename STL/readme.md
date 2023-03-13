@@ -242,14 +242,14 @@ int main()
 ```
 Output:
 
-0 1 2 3 4 5 
-0 1 2 3 4 5 
-0 1 2 3 4 5 
-In loop In loop In loop In loop In loop In loop 
-G e e k s 
-{1, 1}
-{2, 2}
-{3, 3}
+0 1 2 3 4 5 <br />
+0 1 2 3 4 5 <br />
+0 1 2 3 4 5 <br />
+In loop In loop In loop In loop In loop In loop <br />
+G e e k s <br />
+{1, 1} <br />
+{2, 2} <br />
+{3, 3} <br />
 
 
 C++ 17 or higher: Range-based loops can also be used with maps like this: 
