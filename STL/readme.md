@@ -250,9 +250,12 @@ G e e k s
 {1, 1}
 {2, 2}
 {3, 3}
-C++ 17 or higher: Range-based loops can also be used with maps like this: 
 
+
+C++ 17 or higher: Range-based loops can also be used with maps like this: 
+```
 for (auto& [key, value]: myMap) {
     cout << key << " has value " << value << std::endl;
 }
+```
 Here [key, value] works like elements of pair which can be directly accessed without specifying first or second keyword. 
