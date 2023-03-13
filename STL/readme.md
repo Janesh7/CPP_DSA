@@ -98,11 +98,13 @@ FUNCTIONS:
   </b>
   <br />
 NOTE: just for proof of concept he printed and poped the element using the code
+```
     int n = maxi.size();
     for (int i= 0;i<n;i++) {
         cout<<maxi.top(); // prints the highest element
         maxi.pop();
     }
+```
 
 Here we directly put maxi.size() in loop as we r poping in the same loop aswell which would change the size of q with each iteration and would give faulty error ie will only print 2 elements from 4
   <br />
@@ -112,3 +114,9 @@ FUNCTIONS :
 - push(x)
 - pop()
 - empty, size
+
+# Set
+- Has only unique elements
+- <b>IMPLEMENTED USING BST</b>  ;cant modify, can only delete or add new elements;
+- returns in sorted order
+- slower than unordered set(randomly returns ele not sorted) 
