@@ -140,7 +140,7 @@ FUNCTIONS :
 - key value pairs
 - uniq key
 <b>
-- Maps have O(1) for search but here it is o(logn) coz it is implemented uisng red balck tree
+- Maps have O(1) for search which are implemented using hashtables ie the case for unordered map but for ordered it is o(logn) coz it is implemented uisng red balck tree or balanced tree
 </b>
 - sorted for ordered 
 - INITIALIZATION: 
