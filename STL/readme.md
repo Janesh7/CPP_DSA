@@ -71,11 +71,21 @@ FUNCTION
 # Array
 - LAST IN FIRST OUT (LIFO)
 - inistailization : stack<string> s;
+- O(1) for all operations
 <br/>
 FUNCTIONS:
 
-- push(x)
+- push(x),pop()
 - top()
 - size , empty
 
 # Queue
+- FIFO
+- initialization : queue<string> q;
+- O(1) for all operations
+<br/>
+FUNCTIONS:
+
+- push(x),pop()
+- front()
+- size , empty
