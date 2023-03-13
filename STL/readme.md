@@ -104,7 +104,7 @@ NOTE: just for proof of concept he printed and poped the element using the code
         maxi.pop();
     }
 
-Here we directly put maxi.size() in loop as we r poping in the same loop aswell which would change the size of q with each iteration and would give faulty error 
+Here we directly put maxi.size() in loop as we r poping in the same loop aswell which would change the size of q with each iteration and would give faulty error ie will only print 2 elements from 4
 FUNCTIONS :
 
 - push(x)
