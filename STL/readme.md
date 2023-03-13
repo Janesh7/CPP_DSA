@@ -89,3 +89,15 @@ FUNCTIONS:
 - push(x),pop()
 - front()
 - size , empty
+
+# Priority Queue
+- First element always the greatest
+- default is like max heap, can be imported with queue lib
+- <b>INITIALIZATION priority_queue<int> p; // This creates a max heap
+                    priority_queue<int, vector<int>, greater<int> > mini; // creates a min heap 
+  </b>
+  <br />
+
+FUNCTIONS :
+
+- push(x)
