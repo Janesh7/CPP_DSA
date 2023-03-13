@@ -93,7 +93,7 @@ FUNCTIONS:
 # Priority Queue
 - First element always the greatest
 - default is like max heap, can be imported with queue lib
-- <b>INITIALIZATION priority_queue<int> p; // This creates a max heap
+- <b>INITIALIZATION priority_queue<int> p; // This creates a max heap <br />
                     priority_queue<int, vector<int>, greater<int> > mini; // creates a min heap 
   </b>
   <br />
@@ -121,6 +121,9 @@ FUNCTIONS :
 - returns in sorted order
 - slower than unordered set(randomly returns ele not sorted) 
 <br/>
+<b>IMP NOTE</b>
+<br />
+
 Range-based for loop in C++ is added since C++ 11. It executes a for loop over a range. Used as a more readable equivalent to the traditional for loop operating over a range of values, such as all elements in a container.
 
 for ( range_declaration : range_expression ) 
@@ -143,6 +146,7 @@ any statement, typically a compound statement, which
 is the body of the loop.
 C++ implementation : 
 
+```
 // Illustration of range-for loop 
 // using CPP code 
 #include <iostream> 
@@ -235,6 +239,7 @@ int main()
 
                   << "}\n"; 
 }
+```
 Output:
 
 0 1 2 3 4 5 
