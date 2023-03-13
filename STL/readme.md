@@ -1,5 +1,14 @@
 # STL
 Standard template library
+- has Algorithms and Conatianers
+<br/>
+
+<b>Conatiners</b>
+
+- Sequence containers [ Array , Vector , Deque , List ]
+- Container Adaptors [ Stack , Queue , Priority Q ]
+- Associative Containers [ Set , Map ,(MultiSet , MultiMAp)]
+- Unordered Associative [ Unordered ""]
 
 # Array 
 can include<array>
@@ -68,7 +77,7 @@ FUNCTION
 - l.push_front(x),pop_front()
 - l.erase(beg,end) - > COMPLEXITY IS O(n), also l.erase(l.begin()) -> deletes one element ie the first one
 
-# Array
+# Stack
 - LAST IN FIRST OUT (LIFO)
 - inistailization : stack<string> s;
 - O(1) for all operations
