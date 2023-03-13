@@ -139,6 +139,9 @@ FUNCTIONS :
 # Map
 - key value pairs
 - uniq key
+<b>
+- Maps have O(1) for search but here it is o(logn) coz it is implemented uisng red balck tree
+</b>
 - sorted for ordered 
 - INITIALIZATION: 
 ```map<int,string> a; 
