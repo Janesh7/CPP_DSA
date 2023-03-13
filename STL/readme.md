@@ -43,7 +43,7 @@ DOUBLY ENDED QUQUE(deq)
 - Dynamic; initialize: deque<int> d;
 <br/>
 FUNCTIONS:
- 
+
 -    d.push_back(x) -> Push to back
 -    d.push_front(x) -> Push to the front
 -    d.pop_back() -> pop from back
@@ -58,7 +58,9 @@ FUNCTIONS:
 Implementation is Doubly linked list
 - NO RANDOM ACCESS LIKE ARRAY, vector or deque ie have to travel to a certain element and cant go directly.
 - INITIALIZATION : list<int> l;list<int> l(5,100) -> create list of 5 element with each being 100<br/>
+
 FUNCTION
+
 - empty,back,begin,end -> <b>COMPLEXITY IS O(1)</b>
 - size()
 - l.push_back(x),pop_back()
