@@ -23,6 +23,8 @@ can include<array>
     <b>v.pop_back() -> Pops the last element inserted </b>
     <b>v.clear() -> makes the size of the v to 0 BUT NOT CAPACITY</b>
     <b>v.begin() -> returns a iterator from the beginning of the vector</b>
+    v.at(2) -> returns the element at index 2
+    v.empty() -> tell whether empty or not, 
 
 # Deque
 DOUBLY ENDED QUQUE(deq)
@@ -34,3 +36,7 @@ DOUBLY ENDED QUQUE(deq)
     d.push_front() -> Push to the front
     d.pop_back() -> pop from back
     d.pop_front() -> pop from the front
+    d.at(2) -> returns the element at index 2
+    d.first() -> returns the first element, 
+    d.back() -> returns last element,
+    d.empty() -> tell whether empty or not, 
