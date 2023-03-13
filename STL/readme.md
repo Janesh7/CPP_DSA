@@ -110,3 +110,5 @@ Here we directly put maxi.size() in loop as we r poping in the same loop aswell 
 FUNCTIONS :
 
 - push(x)
+- pop()
+- empty, size
