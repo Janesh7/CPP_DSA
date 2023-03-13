@@ -7,11 +7,12 @@ can include<array>
 - it is static i ey not used much , have to specify the size
 <br />
 FUNCTIONS: 
--    arr.size(), 
--    arr.empty() -> tell whether empty or not, 
--    arr.first() -> returns the first element, 
--    arr.back() -> returns last element, 
--    arr.at(2) -> returns the element at index 2
+
+- arr.size(), 
+- arr.empty() -> tell whether empty or not, 
+- arr.first() -> returns the first element, 
+- arr.back() -> returns last element, 
+- arr.at(2) -> returns the element at index 2
 
 # Vector 
 - dynamic: If initially the size of vector is 4 and 5th element is added then the size of the vector DOUBLES
@@ -22,6 +23,7 @@ FUNCTIONS:
 - <b>Initialization - vector<int> v(5,1) initialize vector v with size 5 and all 1s; vector<int> a(v) -> copies the vector v</b>
 <br/>
 FUNCTIONS: 
+
 -    v.first() -> returns the first element, 
 -    v.back() -> returns last element, 
 -    <b>v.pop_back() -> Pops the last element inserted </b>
@@ -40,7 +42,8 @@ DOUBLY ENDED QUQUE(deq)
 - NOT CONTIGOUS LIKE vector or array; multiple fixed static arrays top store the elements are these are tracked
 - Dynamic; initialize: deque<int> d;
 <br/>
-FUNCTIONS: 
+FUNCTIONS:
+ 
 -    d.push_back(x) -> Push to back
 -    d.push_front(x) -> Push to the front
 -    d.pop_back() -> pop from back
