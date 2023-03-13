@@ -40,3 +40,4 @@ DOUBLY ENDED QUQUE(deq)
     d.first() -> returns the first element, 
     d.back() -> returns last element,
     d.empty() -> tell whether empty or not, 
+    <b>d.erase(<beginning>,<end>) -> delete from the range beg to end ;Ex: d.erase(d.begin(),d.begin()+1) -> deletes 1st element</b>
