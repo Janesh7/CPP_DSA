@@ -30,10 +30,9 @@ FUNCTIONS:
 -    v.at(2) -> returns the element at index 2
 -    v.empty() -> tell whether empty or not, 
 To run for loops using the iterators:
-```bash
+
     for (int i:v)
         cout<<I;
-```
 
 # Deque
 DOUBLY ENDED QUQUE(deq)
