@@ -25,6 +25,12 @@ can include<array>
     <b>v.begin() -> returns a iterator from the beginning of the vector</b>
 
 # Deque
-DOUBLY ENDED QUQUE
+DOUBLY ENDED QUQUE(deq)
 - We can push/pop from BOTH th ends
 - NOT CONTIGOUS LIKE vector or array; multiple fixed static arrays top store the elements are these are tracked
+- Dynamic; initialize: deque<int> d;
+- FUNCTIONS: 
+    d.push_back() -> Push to back
+    d.push_front() -> Push to the front
+    d.pop_back() -> pop from back
+    d.pop_front() -> pop from the front
