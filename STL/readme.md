@@ -324,3 +324,8 @@ Here [key, value] works like elements of pair which can be directly accessed wit
 - For sorted
 - Syntax for vectors: binary_search(v.begin(),v.end(),5)  where 5 is the element to be searched 
 - RETURNS WHETHER PRESENT OR NOT, to get the iterator to find the pos of ele use find() for vectors
+## Upper bound 
+The upper_bound() function is used to find the first element in the range [start, end) whose value is greater than the val and returns an iterator pointing to that value.
+
+## Lower bound 
+The lower_bound() method in C++ is used to return an iterator pointing to the first element in the range [first, last) which has a value not less than val. This means that the function returns an iterator pointing to the next smallest number just greater than or equal to that number.
