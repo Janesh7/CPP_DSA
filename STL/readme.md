@@ -335,6 +335,7 @@ The lower_bound() method in C++ is used to return an iterator pointing to the fi
 For both if there is no upper/lower bound it returns the end iterator.
 <br />
 NOTE: Since. it returns an iterator, For both we have to subtract the beign iterator to get the index
+
 ```
 // lower_bound and upper_bound in vector
  
@@ -380,3 +381,9 @@ Output
 lower_bound for 6 at index 3
 upper_bound for 6 at index 6
 ```
+
+## max, min and swap
+
+max(a,b)
+min(a,b)
+swap(a,b)
