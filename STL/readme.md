@@ -396,5 +396,5 @@ reverse(s.begin(),s.end());
 - rotate(v.begi(),bv.begin()+1,v.end()); // rotates by 1
 
 ## SORT
-- <b>BASED ON INTRO SORT: which is a mix of 3 sorting algorithms ie QUICK sort, HEAP sort, and INSERTION sort</b>
+- <b>BASED ON INTRA SORT: which is a mix of 3 sorting algorithms ie QUICK sort, HEAP sort, and INSERTION sort</b>
 - sort(v.begin(),v.end());
