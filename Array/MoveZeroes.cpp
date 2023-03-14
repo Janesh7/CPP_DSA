@@ -33,12 +33,12 @@ public:
         ios_base::sync_with_stdio(false);
         cin.tie(nullptr);
         cout.tie(nullptr);
-        int i =0;
+        int NonZero =0; // Means the non zero value should come to this index
         for (int j = 0; j<nums.size();j++)
         {
-            if (nums[j] != 0) {
-                swap(nums[j],nums[i]);
-                i++;
+            if (nums[j] != 0) { // FInd a non zero element
+                swap(nums[j],nums[NonZero]); // Swap to the pos in Non Zero
+                NonZero++; // Increment the non zero element
             }
         }
     }
