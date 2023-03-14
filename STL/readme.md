@@ -382,8 +382,19 @@ lower_bound for 6 at index 3
 upper_bound for 6 at index 6
 ```
 
-## max, min and swap
+## max, min , reverse and swap
 
 max(a,b)
 min(a,b)
 swap(a,b)
+<br />
+string s = "abcd";
+reverse(s.begin(),s.end());
+
+## rotate
+- begin, how many to rotate(begin+n),end as arguments
+- rotate(v.begi(),bv.begin()+1,v.end()); // rotates by 1
+
+## SORT
+- <b>BASED ON INTRO SORT: which is a mix of 3 sorting algorithms ie QUICK sort, HEAP sort, and INSERTION sort</b>
+- sort(v.begin(),v.end());
