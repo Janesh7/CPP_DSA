@@ -12,7 +12,7 @@ void insertionSort(int n, vector<int> &arr){
                 //shift
                 arr[j+1] = arr[j];
             }
-            else { // ruk jao
+            else { // else stop and come out
                 break;
             }
             
