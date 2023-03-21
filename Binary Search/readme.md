@@ -34,3 +34,8 @@ Ex. Given an array ‘arr’ of integer numbers . where ‘arr[i]’ represents 
 2. Each book should be allocated to a student.
 3. Book allocation should be in a contiguous manner.
 You have to <b>allocate the book to ‘m’ students such that the maximum number of pages assigned to a student is minimum.</b>
+
+
+why we apply b search on non sorted?
+
+we use mostly on sorted array, but here we know the fact that if we choose the middle one then we can eliminate either side of the array and more important is that we are working on sum of the array not as per the values reside into the vector, so we can use that binary search into it. Also given that they r contiguous.
