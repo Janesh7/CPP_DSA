@@ -37,7 +37,7 @@ public:
         {
             if (s[i] == s[i+1])
             {
-                s.erase(i,2);
+                s.erase(i,2); // DELETES 2 (ie itself and the next from the index) char from str
                 if (i>0)
                     i--;
                 continue;
