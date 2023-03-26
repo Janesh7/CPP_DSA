@@ -3,7 +3,7 @@
 These are linear array only but we are visualizing it as a 2d array, this can be done using a mathematical function which would tell the index of elements stored.
 For ex. A 3x3 matrix : 9 elements (0-8) , formula : Nc*r + c (Nc- number of column): 0th row 1st column : 0+1 = 1, 1st row 1st column : 3 +1 = 4
 <br />
-IMP: NEVER PUT void example(int Array[][]){} , ALWAYS SPECIFY THE COULMN SIZE Ex: void example(int Arr[][3]) or int a[][2][2] and so on
+IMP: NEVER PUT void example(int Array[][]){} , ALWAYS SPECIFY THE COULMN SIZE Ex: void example(int Arr[][3]) or int a[][2][2] and so on, atleast u have to put column number
 <br />
 <b>It is needed to compute the relative offset of the item you're actually accessing. The array itself is just a linear block, but rather than you having to to do (row*colwidth + col) (which works, btw) the offsets are done for you by the compiler once it knows the second-order magnitude.</b>
 <br />

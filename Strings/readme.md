@@ -8,3 +8,5 @@ NUL CHARACTER '\0' is used as terminator, its ASCII value is 0, when compiler fi
 <br />
 IMP: Diff btw string and char array : 
 std::string stores its data internally in the form of a null terminated C-string, but in normal usage doesnt allow u to access the null terminator.
+<br/>
+CHECK cplusplus site for all str functions and documentation
