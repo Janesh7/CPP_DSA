@@ -1,0 +1,15 @@
+#include <bits/stdc++.h> 
+using namespace std;
+int modularExponentiation(int x, int n, int m) {
+	// Write your code here.
+	int res = 1;
+
+	while (n>0)
+	{
+		if (n&1) // for odd 
+			res = ( 1LL * (res) * (x)%m)%m; // 1LL explicit type conversion to long long int
+		x = ( 1LL * (x)%m * (x)%m)%m;
+		n = n>>1; // divide by 2, bit manip is faster
+	}
+	return res;
+}
