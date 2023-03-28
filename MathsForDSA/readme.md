@@ -27,3 +27,16 @@ gcd(a,b) = gcd(a%b,b) = gcd(a-b,b)
 wkt, <b>LCM(a,b)*HCF(a,b) = axb</b>
 therefore find it using the hcf formula
 
+## Modulu arithmetic
+
+a%n -> [0--->(n-1)] included
+- It is imp to read here as for code where output can be really big for example n!, to avoid the overflow they ask to print the answer as <b>(ans modulus 10^9+7)</b>
+
+## Fast exponentiation
+- normal approach -> a^b O(b)
+- fast exp -> O(logb)
+- FAST EXP:
+a^b -> (a^(b/2))^2 if b is even
+<br/>
+    -> (a^(b/2))^2 *a if b is odd
+
