@@ -39,4 +39,5 @@ a%n -> [0--->(n-1)] included
 a^b -> (a^(b/2))^2 if b is even
 <br/>
     -> (a^(b/2))^2 *a if b is odd
+- NOTE: multiply by 1LL to do explicit type conversion to long long int
 
