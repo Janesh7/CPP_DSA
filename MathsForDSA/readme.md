@@ -31,6 +31,7 @@ therefore find it using the hcf formula
 
 a%n -> [0--->(n-1)] included
 - It is imp to read here as for code where output can be really big for example n!, to avoid the overflow they ask to print the answer as <b>(ans modulus 10^9+7)</b>
+READ ABOUT THIS 
 
 ## Fast exponentiation
 - normal approach -> a^b O(b)
@@ -40,4 +41,9 @@ a^b -> (a^(b/2))^2 if b is even
 <br/>
     -> (a^(b/2))^2 *a if b is odd
 - NOTE: multiply by 1LL to do explicit type conversion to long long int
+
+## Read
+- Pigeon hole principle
+- catalan number
+- Inclusion - exclusion principle
 
