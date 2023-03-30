@@ -12,3 +12,7 @@ Symbol table: is an important ds created by the compiler in order to keep track 
     NOTE: int *ptr; is avery bad practice, this means we initailized a pointer and it stores and random memory address which can be modified, rather initialize to 0, nullptr.
 </b>
 - int *ptr = &num; means p and num BOTH are pointing to the same memory address, soo doing num++ and (*p)++ would yield the  same result
+<datatype> *p -> systanx to create a pointer, the pointer created is pointing to the <datatype>
+<b> * - is a DEREFERENCE OPERATOR , means VALUE OF, ie tell the value in the memory addy</b>
+
+- Size of a pointer of anything is ALWAYS 8
