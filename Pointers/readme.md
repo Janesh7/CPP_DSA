@@ -24,4 +24,6 @@ int *ptr = 0;
 This is because a store the VALUE refrenced by the pointer coz we used deref op. and not the pointer.
 If (*p)++ is done thenn n value is changed.
 
+NOTE: ALWAYS USE BRACKETS FOR ABOVE OPERATION
+
 - To copy the pointer : int *q = p; // p in above
