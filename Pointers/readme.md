@@ -27,3 +27,7 @@ If (*p)++ is done thenn n value is changed.
 NOTE: ALWAYS USE BRACKETS FOR ABOVE OPERATION
 
 - To copy the pointer : int *q = p; // p in above
+
+<b>When u try to increment the pointer address</b>
+if u do p = p+1;
+let p be the pointer storing the address of an int, and let the adress be 100, then p = p+1 wont become 101 BUT rather would become 104 as int take 4 storage unit so it points to the next int, if it was pointing to a double, then it would go to 108
