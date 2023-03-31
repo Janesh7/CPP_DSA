@@ -23,3 +23,5 @@ int *ptr = 0;
 - IMP: if we do int *p = &n; int a = *p; and then a++ WILL NOT change the value of n rather only a is changed.
 This is because a store the VALUE refrenced by the pointer coz we used deref op. and not the pointer.
 If (*p)++ is done thenn n value is changed.
+
+- To copy the pointer : int *q = p; // p in above
