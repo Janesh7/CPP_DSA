@@ -18,4 +18,4 @@ Symbol table: is an important ds created by the compiler in order to keep track 
 - Size of a pointer of anything is ALWAYS 8
 
 int *ptr = 0;
-ptr = &i; // NOTE : NO * WHILE POINTING THE ADDRESS
+<b>ptr = &i; // NOTE : NO * WHILE POINTING THE ADDRESS</b>
