@@ -9,7 +9,7 @@ Symbol table: is an important ds created by the compiler in order to keep track 
 - WHY pointer is used?
 
 <b> POINTER is a variable to store an memory addres .Ex int *ptr = &i; </br>
-    NOTE: int *ptr; is avery bad practice, this means we initailized a pointer and it stores and random memory address which can be modified, rather initialize to 0, nullptr.
+    NOTE: int *ptr; is avery bad practice, this means we initailized a pointer and it stores and random memory address which can be modified, rather initialize to 0, nullptr. ie no memory exists for now ( if u try to print the value of it, segmentation fault)
 </b>
 - int *ptr = &num; means p and num BOTH are pointing to the same memory address, soo doing num++ and (*p)++ would yield the  same result
 <datatype> *p -> systanx to create a pointer, the pointer created is pointing to the <datatype>
