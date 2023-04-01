@@ -320,3 +320,12 @@ void main() {
     // Here ptr is dangling pointer
 }
 ```
+
+# Pointers on Array
+
+- We know that the array variable stores the address of the first element of the arr
+- therefore cout<<arr; is same as cout<<&arr[0];
+- Dereference op can be used directly on an array to get any value
+- *arr is same as arr[0]
+- We can access any index value by: (*arr+i) , AND IN a[i] WORKS THE SAME WAY.
+NOTE: PARATHESIS R IMP
