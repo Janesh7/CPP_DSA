@@ -333,3 +333,18 @@ void main() {
 NOTE: PARATHESIS R IMP
 are[i] = *(are+i) internally 
 - <b>ALSO i[arr]=*(i+arr) IS VALID AND WORKS SAME AS arr[i], WONT GIVE AMY ERROR, IMP FOR MCQs </b>
+
+
+if i do arr = arr +1 it gives error coz u can't change the state of symbol table, whereas if a pointer is created then p = p+1 doesn't give any error because we r not changing the adress of ptr in symbol table rather is changing a value.
+
+# Character array
+- cout function bis differently implementated for char array and int array
+- cout<<arr prints addy of 1st ele, and cout<<ch would print the array.
+- IMP FOR MCQS: even if we do char *p = &ch[0] and then cout<<p; would print the whole string unlike array where 1st element addy is printed.
+- IMP FOR MCQS: the cout function for char arrays are implemented differently, it prints the memory content untill a null character is encountered. If we take a single char (doesn't have null char) it would give unexpected output as it would print garbage value until null char is encountered
+```
+char temp = 'z';
+char *p = &t;
+cout<<p;
+op: z06j
+```
