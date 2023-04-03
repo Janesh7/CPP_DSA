@@ -4,6 +4,8 @@ Symbol table: is an important ds created by the compiler in order to keep track 
 
 - a m variable is mapped to corresponding address (where the value can be found)        || var -> mem addy ||
 - Content of symbol table CANNOT be changed 
+
+
 <b>ADDRESS OF OPERATOR (& operator) -> returns the address of the memory, IT IS HEXADECIMAL FORMAT</b>
 
 - WHY pointer is used?
