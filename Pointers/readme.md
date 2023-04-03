@@ -2,8 +2,8 @@
 
 Symbol table: is an important ds created by the compiler in order to keep track of semantics of variable ie it stores informatiom about the scope and binding information about names, information about instances of various entities such as variable and function names, classes, objects, etc.
 
-- a variable is mapped to corresponding address (where the value can be found)        || var -> mem addy ||
-
+- a m variable is mapped to corresponding address (where the value can be found)        || var -> mem addy ||
+- Content of symbol table CANNOT be changed 
 <b>ADDRESS OF OPERATOR (& operator) -> returns the address of the memory, IT IS HEXADECIMAL FORMAT</b>
 
 - WHY pointer is used?
@@ -15,7 +15,7 @@ Symbol table: is an important ds created by the compiler in order to keep track 
 <datatype> *p -> systanx to create a pointer, the pointer created is pointing to the <datatype>
 <b> * - is a DEREFERENCE OPERATOR , means VALUE OF, ie tell the value in the memory addy</b>
 
-- Size of a pointer of anything is ALWAYS 8
+- Size of a pointer of anything is ALWAYS 8 and size of an address is also 8
 
 int *ptr = 0;
 <b>ptr = &i; // NOTE : NO * WHILE POINTING THE ADDRESS</b>
@@ -327,5 +327,7 @@ void main() {
 - therefore cout<<arr; is same as cout<<&arr[0];
 - Dereference op can be used directly on an array to get any value
 - *arr is same as arr[0]
-- We can access any index value by: (*arr+i) , AND IN a[i] WORKS THE SAME WAY.
+- We can access any index value by: *(arr+i) , AND IN a[i] WORKS THE SAME WAY.
 NOTE: PARATHESIS R IMP
+are[i] = *(are+i) internally 
+- <b>ALSO i[arr]=*(i+arr) IS VALID AND WORKS SAME AS arr[i], WONT GIVE AMY ERROR, IMP FOR MCQs </b>
