@@ -2,7 +2,7 @@
 
 Symbol table: is an important ds created by the compiler in order to keep track of semantics of variable ie it stores informatiom about the scope and binding information about names, information about instances of various entities such as variable and function names, classes, objects, etc.
 
-- a m variable is mapped to corresponding address (where the value can be found)        || var -> mem addy ||
+- a variable is mapped to corresponding address (where the value can be found)        || var -> mem addy ||
 - Content of symbol table CANNOT be changed 
 
 
@@ -348,3 +348,12 @@ char *p = &t;
 cout<<p;
 op: z06j
 ```
+- char c[6]= 'abcde'; 
+
+The behind the scene process for this is : first abcde is stored in a temp memory then a memory of 6 char is allocated and then the content of the temp memory is copied to it.
+- char *p = 'abcde';
+
+<b>IMP: VERY BAD PRACTICE: coz 'abcde' is stored in a temporary memory and then the pointer points to that temp memory which is bad.</b>
+
+#### Passing a pointer to a function
+int func (int *p) {cout<<*p;}
