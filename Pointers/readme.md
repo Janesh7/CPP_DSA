@@ -357,3 +357,6 @@ The behind the scene process for this is : first abcde is stored in a temp memor
 
 #### Passing a pointer to a function
 int func (int *p) {cout<<*p;}
+- IMP: When u pass pointer in function it is copied and hence if u change the pointer like p=p+1 then this would not change the pointer adress throughout . BUT IF U CHANGE THE VALUE like *p=*p+1 this would change the value pointed by the pointer throughout.
+- IMP: When u pass an array as parameter it goes as a pointer always. ie funct(int arr[]) is same as funct(int *arr) internally and externally.
+- This approach is better as u r not passing the whole copy of array. Also this can used to send a part of array instead of whole array while calling the function like func(arr+3) would skip the first the memory loc.
