@@ -371,4 +371,4 @@ Why do we use data type in pointers?
 
 ## Double pointers
 It is a pointer to a pointer
-- to create a pointer of int we do int* so to point an int* we will use int** as the type.
+- to create a pointer of int we do int* so to point an int* we will use int**  (ie pointer to int*) as the type.
