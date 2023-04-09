@@ -367,3 +367,8 @@ int func (int *p) {cout<<*p;}
 Why do we use data type in pointers?
 - to specify which type of data is being handled
 - to specify the amount of memory which will be considered for operations
+
+
+## Double pointers
+It is a pointer to a pointer
+- to create a pointer of int we do int* so to point an int* we will use int** as the type.
