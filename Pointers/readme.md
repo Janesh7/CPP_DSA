@@ -377,5 +377,6 @@ int a =8;
 int* P1 = &a;
 int** p2 = &P1;
 ```
-So here p2 holds the address of P1, so *p2 and P1 gives the same output ie the address of memory for var a
+So here p2 holds the address of P1, so *p2 and P1 gives the same output ie (&i) the address of memory for var a
 - cout<<a<<*P1<<**p2 gives the same output.
+NOTE: READ THE PROGRAM OF PASSING DOUBLE POINTER AS FUNCTION TO SEE WHAT U CAN CHANGE AND WHAT U CAN'T, ( summary: p= p+1 no change, *p=*p+1 change visible, **p=**p+1 change visible 
