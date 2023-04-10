@@ -371,4 +371,11 @@ Why do we use data type in pointers?
 
 ## Double pointers
 It is a pointer to a pointer
-- to create a pointer of int we do int* so to point an int* we will use int**  (ie pointer to int*) as the type.
+- to create a pointer of int we do int* so to point an int* we will use int**  (ie pointer to int*) as the type
+```
+int a =8;
+int* P1 = &a;
+int** p2 = &P1;
+```
+So here p2 holds the address of P1, so *p2 and P1 gives the same output ie the address of memory for var a
+- cout<<a<<*P1<<**p2 gives the same output.
