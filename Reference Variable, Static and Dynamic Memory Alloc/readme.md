@@ -72,3 +72,22 @@ int* i = new int;
 
 
 
+### Dynamic arrays
+```
+int* arr = new int[5];
+```
+memory 28 (8+5*4) bytes
+8-> static memory
+20 -> dynamic memory
+
+
+
+IMP:
+```
+int n;
+cin>>n;
+int* arr = new int[n];
+```
+
+
+creates an array of size n dyanamically. 4*n bytes in heap. the first address of the array is stored in stack as a pointer.
