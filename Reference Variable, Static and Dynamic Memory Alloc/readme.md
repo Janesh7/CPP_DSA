@@ -42,3 +42,17 @@ SAME GOES WITH A POINTER
 
 
 <b> When a program is executed, a small stack memory is allocated and large heap memory is allocated.SO if we do int arr[10000] it would create a larger stack accordingly(which is done at complie time). So if we r doing at runtime, the stack alloacted would be small and if the stack required is big program will crash</b>
+
+
+- When we create a var it is stored in stack(static memory alloc). 
+- For variable size memory allocation we use heap memory, and not use ^ practise.
+- TO USE HEAP MEMORY: WE HAVE TO USE KEYWORD **new** . (dynamic memory alloc)
+- NO NAME IS ALLOWED IN HEAP
+- Therefore to create a char variable dynamically:
+```
+new char;
+```
+is used... this returns an address and that can be stored as a pounter. Therefore full syntax:
+```
+char* ch = new char;
+```
