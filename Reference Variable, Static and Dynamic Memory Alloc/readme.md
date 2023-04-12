@@ -16,3 +16,16 @@ We know that in cpp, the parameters are passed by values in function, and any up
 int funct(int& n) { return n++;}
 ```
 ie we r creating a ref variable to the same memory instead of creating a new copied value of the parameter.
+- This saves the memory as in pass by value a new memory is used
+- We can use REFERENCE VARIABLE as a return type also:
+```
+int& update(int n)
+{
+    int a = 10;
+    int& ans = a;
+    return ans;
+}
+```
+
+
+NOTE: THIS IS A VERY BAD PRACTISE AS U CAN SEE WE HAVE CREATED A LOCAL VARIABLE a AND WE ARE RETURNING ITS REF, WKT THE VARIBLE A'S MEMORY WOULD BE DELETED ONCE THE FUNCTION IS FULLY EXECUTED
