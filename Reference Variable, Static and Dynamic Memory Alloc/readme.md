@@ -56,3 +56,19 @@ is used... this returns an address and that can be stored as a pounter. Therefor
 ```
 char* ch = new char;
 ```
+- Takes 9 bytes of memory (8+1), ch->1, and ptr->8
+- WHAT HAPPENS INTERNALLY?
+
+
+So, a memory for char is stored in heap, and the address is returned. **POINTER IS CREATED IN STACK** and points to the memory in heap.
+
+- A pointer takes 8 byte in 64 bit system anf 4 byte in 32 bit system.
+
+```
+int* i = new int;
+```
+12 bytes (8+4 bytes)
+
+
+
+
