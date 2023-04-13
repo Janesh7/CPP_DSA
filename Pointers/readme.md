@@ -181,6 +181,7 @@ Output:
  
 
 ## 3. Void Pointers:
+**IMP**
 A void pointer is a generic pointer; it has no associated type with it. A void pointer can hold an address of any type and can be typecasted to any type. Thus we can use the void pointer to store the address of any variable.
 
 Void pointer is declared by: 
@@ -217,6 +218,24 @@ int main() {
 Output:
 Address of variable i 0x7ffc848c25f4
 Address where the void pointer is pointing 0x7ffc848c25f4
+
+
+**IMP**
+To Dereference a void pointer, U MUST TYPE CAST THE POINTER EXPLICITLY:
+```
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+    int a = 10;
+    void* ptr = &a;
+   
+    cout << *(int *)ptr << endl;
+   
+    return 0;
+}
+```
  
 
  

@@ -91,3 +91,45 @@ int* arr = new int[n];
 
 
 creates an array of size n dyanamically. 4*n bytes in heap. the first address of the array is stored in stack as a pointer.
+
+
+
+Small example for concept
+
+```
+while(True)
+{
+    int* p = new int;
+}
+```
+The above code can crash the memory as,it continuosly allocates memory. <b>The Stack memory gets released in the above code after each loop(ie ptr p memory gets released but int memory in heap isnt freed) but the heap value doesnt, therefore crash </b>
+But the below code doesnt as the local variable is deleted after each loop and new is created each time. hence no crash
+```
+while(True)
+{
+ int a = 5;   
+}
+```
+
+
+
+STATIC MEMORY: 
+- <b>Memory automatically release</b>
+
+
+
+DYNAMIC MEMORY: 
+- <b>Memory manually released (unlike java) using delete KEYWORD</b>
+
+
+
+EX. delete i; 
+
+
+
+**IMP: TO DELETE AN ARRAY USE SYNTAX**
+
+```
+delete []arr;
+```
+
