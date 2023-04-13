@@ -236,7 +236,10 @@ int main()
     return 0;
 }
 ```
- 
+ Advantages of Type Conversion:
+
+- This is done to take advantage of certain features of type hierarchies or type representations.
+- It helps to compute expressions containing variables of different data types.
 
  
 
@@ -405,3 +408,34 @@ NOTE: READ THE PROGRAM OF PASSING DOUBLE POINTER AS FUNCTION TO SEE WHAT U CAN C
 **p=**p+1
 ``` 
 change visible 
+
+
+## Address Typecasting
+
+
+I have the following variables:
+
+char *p;
+int l=65;
+Why do the following casts fail?
+
+(int *)p=&l;
+and:
+
+p=&((char) l);
+c
+
+
+ANSWER:
+
+The result of type conversion is always an rvalue. Rvalue cannot be assigned to, which is why your first expression doesn't compile. Rvalue cannot be taken address of, which is why your second expression doesn't compile.
+
+In order to perform the correct type conversion, you have to to it as follows
+
+p = (char *) &l;
+This is the proper way to do what you tried to do in your second expression. It converts int * pointer to char * type.
+
+Your first expression is beyond repair. You can do
+
+*(int **) &p = &l;  
+but what it does in the end is not really a conversion, but rather reinterpretation of the memory occupied by char * pointer as int * pointer. It is an ugly illegal hack that most of the time has very little practical value.
