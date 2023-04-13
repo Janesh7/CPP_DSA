@@ -133,3 +133,75 @@ EX. delete i;
 delete []arr;
 ```
 
+## 2D array using dynamic memory alloc
+
+**IMPORTANT**
+
+
+wkt, a dynamic array can be created using :
+
+
+int arr = new int[m];
+
+
+So for a 2D array we can make arrays of the above code to get a 2D array.
+- We make an array of int*s and then recursively add each arr[m] into memory;
+- to store int* variable we have to use int** .
+```
+int** arr = new int*[n];
+```
+
+This means that the memory has n int* pointers in an array
+like 
+
+
+
+-------
+|int *| ------> array
+-------
+-------
+|int *|
+-------
+-------
+|int *|
+-------
+-------
+|int *|
+-------
+-------
+|int *|
+-------
+.
+.
+.
+n
+
+
+and now we want an array corresponding to each int*. Therefore we'll use for loop to allocate em.
+
+
+CODE FOR CREATION :
+
+```
+int** arr = new int*[row];
+
+for (int i = 0;i<row;i++)
+{
+    arr[i] = new int[col];
+}
+```
+
+
+
+TO RELEASE 2D array memory
+
+
+
+
+```
+for (int i = 0;i<row;i++){
+    delete [] arr[i]; // TO release the colmn part ie each arrays being pointed
+}
+
+delete []arr; // TO delete all the rows, ie the row of pointers shown above
+```
