@@ -212,3 +212,18 @@ Ans. Macros are abbreviations for lengthy and frequently used statements. When a
 
 The advantage of macro is that it reduces the time taken for control transfer as in case of function.
 The disadvantage of it is here the entire code is substituted so the program becomes lengthy if a macro is called several times. 
+
+
+
+# Global Variable
+
+
+- Its a bad practice
+- Because any function can change it , it changes for every function
+- Use reference varible instead int func(int& i)
+
+
+# Inline Functions
+
+
+- Are used to reduce the function overhead
