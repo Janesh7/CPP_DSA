@@ -227,3 +227,17 @@ The disadvantage of it is here the entire code is substituted so the program bec
 
 
 - Are used to reduce the function overhead
+- When a function is called its put on the function call stack, and new memory gets allocated for its variable
+- this leads to function call overhead, therefore minimal performance hit
+- Inline functions are used to avoid such overhead
+- Use inline keyword to make a function an inline func
+- Depends upon the compiler if he wants to make it inline (genrally it doesnt make any function with more than 3 lines as inline)
+- Like a macro , compiler inserts the code where it is called in compile time and hence saves function call overhead and associated memory usage
+- recursive functions arent allowed 
+- Makes the code neat
+
+
+# Default parameters
+
+- void printf(int arr[], int n, int start=0)
+- IMP: ALL THE DEAFULT PARAMETERS SHOULD BE ON THE RIGHT SIDE, otherwise error as compiler doesnt know which var is being refered.
