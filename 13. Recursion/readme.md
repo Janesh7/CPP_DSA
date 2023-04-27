@@ -14,5 +14,15 @@ In better terms:
 
 
 In recursion 2 things
-- base case
-- recursive function
+- base case (return is mandatory)
+- recursive function (smaller func and bigger func, refer factorial)
+
+
+
+<br />
+
+When we dont have a base case we have infinite fucntion calls which will fill the fucntion calls, and a time wil come when the stack memory is filled and hence it will give a segmentation fault. Hence base case is mandatory.
+
+
+- Functiona call stack-> main, fact(3), fact(2), fact(1),fact(0)-> returns 1, and so on 1*2*3, returns 6.
+
