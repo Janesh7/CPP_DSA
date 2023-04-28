@@ -37,6 +37,8 @@ When we dont have a base case we have infinite fucntion calls which will fill th
 
 
 -----------------------------------<br />
+
+## VID 2
 Whenever we r trying to solve a problem by recursion **we must focus on solving 1 case and rest would come automatically**
 
 
@@ -78,3 +80,13 @@ Note : this approach gives TLE, code studio expects us to solve this by dp
 
 
 Refer PDF FOR RECURSION TREE TO EASILY UNDERSTAND IT, SAME AS FIB
+
+
+
+### VID 3
+
+Q Is Sorted question using recursion
+
+
+- base case: if array of size 0 or 1 , then its sorted , return true
+- recursive function call: call the function while passing the second elements index in the function,and reducing the size by 1
