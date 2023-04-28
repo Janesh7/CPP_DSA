@@ -47,3 +47,31 @@ Q. Find nth fibonacci series number
 
 Recurence relation: f(n) = f(n-1) + f(n-2)
 
+
+Note: starting from 0th term
+
+
+ refer PDF FOR RECURSION TREE TO EASILY UNDERSTAND IT
+
+
+----------------------------------------------------------------
+<br />
+
+
+Taking the last steps into consideration, the guy wouldve jumped from the last step(1 jump) or the one before it (2 jumps), hence gives the recurrence relation:
+
+
+
+f(n) = f(n-1) + f(n-2)
+
+
+
+Base case: we know that there is no staircase underground and hence gives -> if (n<0) return 0;
+also another case when guy is at first step (basement), he jumps at the same spot hence 1 step -> if (n==0) return 1; ie there is 1 way of getting from 0th step to 0th step
+
+
+
+Note : this approach gives TLE, code studio expects us to solve this by dp
+
+
+Refer PDF FOR RECURSION TREE TO EASILY UNDERSTAND IT, SAME AS FIB
