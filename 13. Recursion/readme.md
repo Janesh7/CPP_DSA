@@ -57,6 +57,9 @@ Note: starting from 0th term
 ----------------------------------------------------------------
 <br />
 
+Q Count Ways To Reach The N-th Stairs
+
+
 
 Taking the last steps into consideration, the guy wouldve jumped from the last step(1 jump) or the one before it (2 jumps), hence gives the recurrence relation:
 
