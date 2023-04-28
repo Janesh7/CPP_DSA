@@ -38,3 +38,12 @@ When we dont have a base case we have infinite fucntion calls which will fill th
 
 -----------------------------------<br />
 Whenever we r trying to solve a problem by recursion **we must focus on solving 1 case and rest would come automatically**
+
+
+Recursion is similar to PMI (principle of mathematical induction )- where we used to prove P(0) or P(1) as true and then assume P(k) is true, and prove P(k+1) is true , These conditions match the fib series as well, ( base case, solve 1 case, hence all the case will be solved)
+
+Q. Find nth fibonacci series number
+
+
+Recurence relation: f(n) = f(n-1) + f(n-2)
+
