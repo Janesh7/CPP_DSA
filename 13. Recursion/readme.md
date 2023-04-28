@@ -16,13 +16,15 @@ In better terms:
 In recursion 3 things
 - base case (return is mandatory)
 - recursive function (smaller func and bigger func, refer factorial)
-- processing ( might process the data, or print it )
+- processing ( might process the data, or print it ) (optional)
 
 TYPES:
 - Tail Recursion: where recursive function comes at the end ( base case -> processing -> recursive function )
 - Head recursion : where recursive fucntion is above the processing ( base case -> recursive function -> processing )
 
 
+
+Diff: Like the conting.cpp , if we use tail recursion o/p: 5 4 3 2 1 , if we use head recursion o/p: 1 2 3 4 5, depends upon where we put the cout statement
 
 <br />
 
@@ -31,3 +33,8 @@ When we dont have a base case we have infinite fucntion calls which will fill th
 
 - Functiona call stack-> main, fact(3), fact(2), fact(1),fact(0)-> returns 1, and so on 1*2*3, returns 6.
 
+
+
+
+-----------------------------------<br />
+Whenever we r trying to solve a problem by recursion **we must focus on solving 1 case and rest would come automatically**
