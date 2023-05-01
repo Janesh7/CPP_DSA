@@ -136,3 +136,13 @@ Example:
 
 <br />
 That is in 11 iterations this is computed wheareas it wouldve taken 1024 iterations.
+
+
+
+<br />
+
+**Bubble sort**
+
+
+- Bubble sort using recursion: In Bubble sort our aim is to get the largest element to the last and repeat it, hence recursion can be used
+- We use iteration to find the largest element and swap it with the last  element, and recursively do this process until the size of the array left is 1 or 0
