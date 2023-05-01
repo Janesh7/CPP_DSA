@@ -191,7 +191,7 @@ Merge sort is a popular choice for sorting large datasets because it is relative
 
 ILLUSTRATION
 
-[Alt text](https://media.geeksforgeeks.org/wp-content/uploads/20220722205737/MergeSortTutorial.png)
+![App Screenshot](https://media.geeksforgeeks.org/wp-content/uploads/20220722205737/MergeSortTutorial.png)
 
 
 
@@ -213,7 +213,10 @@ step 3: perform merge function.
 step 4: Stop
 ```
 
-The above recurrence can be solved either using the Recurrence Tree method or the Master method. It falls in case II of the Master Method and the solution of the recurrence is θ(Nlog(N)). **The time complexity of Merge Sort isθ(Nlog(N)) in all 3 cases (worst, average, and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.**
+The above recurrence can be solved either using the Recurrence Tree method or the Master method. It falls in case II of the Master Method and the solution of the recurrence is θ(Nlog(N)). 
+
+
+**The time complexity of Merge Sort isθ(Nlog(N)) in all 3 cases (worst, average, and best) as merge sort always divides the array into two halves and takes linear time to merge two halves.**
 
 
 
@@ -221,14 +224,14 @@ Auxiliary Space: O(n), In merge sort all elements are copied into an auxiliary a
 
 
 
--Is Merge sort In Place?
+- Is Merge sort In Place?
 
 No, In merge sort the merging step requires extra space to store the elements.
 
 
 
 
--Is Merge sort Stable?
+- Is Merge sort Stable?
 
 Yes, merge sort is stable. 
 
@@ -248,7 +251,9 @@ A merge sort consists of several passes over the input. The first pass merges se
 
 
 
-##### Applications of Merge Sort: 
+##### IMPORTANT Applications of Merge Sort: 
+
+- **Merge sort is often preferred for sorting a linked list. The slow random-access performance of a linked list makes some other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible.** 
 
 - Sorting large datasets: Merge sort is particularly well-suited for sorting large datasets due to its guaranteed worst-case time complexity of O(n log n). This makes it a popular choice for sorting algorithms used in databases and other data-intensive applications.
 
