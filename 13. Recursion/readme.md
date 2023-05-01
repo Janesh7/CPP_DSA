@@ -90,3 +90,49 @@ Q Is Sorted question using recursion
 
 - base case: if array of size 0 or 1 , then its sorted , return true
 - recursive function call: call the function while passing the second elements index in the function,and reducing the size by 1
+
+
+### VID 4
+
+
+Exponent using recursion (optimised)
+
+- Normal a^b , multiply a to itself b times
+- OPTIMIZED: take two cases
+
+
+
+1. if b is even :
+    ```
+        a^b = a^(b\2) x a^(b\2)
+    ```
+
+
+2. if b is odd :
+    ```
+        a^b = a x a^(b\2) x a^(b\2)
+    ```
+
+
+
+Example :
+2^9 -> 2 x (2^4) x (2^4) <br />
+-> 2^4 = 2^2 x 2^2 <br />
+-> 2^2 = 2^1 x 2^1 <br />
+-> 2^1 = 2 x 2^0 , which we know is 1
+
+
+- Hence only 4 iteration is required , otherwise 9
+
+
+
+This is significant for higher numbers 
+
+
+
+Example:
+<br />
+2^1024 can be computed in 2^1024 -> 2^512 -> 2^256 -> 2^128 -> 2^64 -> 2^32 -> 2^16 -> 2^8 -> 2^4 -> 2^2 -> 2^1 -> 2^0
+
+<br />
+That is in 11 iterations this is computed wheareas it wouldve taken 1024 iterations.
