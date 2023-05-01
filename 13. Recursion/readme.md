@@ -275,3 +275,16 @@ A merge sort consists of several passes over the input. The first pass merges se
 - Versatility: Merge sort can be used to sort a wide range of data types, including integers, floating-point numbers, and strings.
 
 - Adaptability: Merge sort can be adapted to handle different input distributions, such as partially sorted, nearly sorted, or completely unsorted data. This makes it useful in a variety of real-world applications.
+
+
+##### Drawbacks of Merge Sort:
+
+- Space complexity: Merge sort requires additional memory to store the merged sub-arrays during the sorting process. This can be a disadvantage in applications with limited memory resources.
+
+- Recursive algorithm: Merge sort is a recursive algorithm, which can result in a large number of function calls and stack usage for very large datasets. This can cause stack overflow errors or other performance issues.
+
+- Not in-place: Merge sort is not an in-place sorting algorithm, which means it requires additional memory to store the sorted data. This can be a disadvantage in applications where memory usage is a concern.
+
+- Not always optimal for small datasets: Merge sort has a higher time complexity than some other sorting algorithms, such as insertion sort, for small datasets. This can result in slower performance for very small datasets.
+
+- Complexity of implementation: Merge sort can be more complex to implement than some other sorting algorithms, particularly for developers who are not familiar with recursive algorithms or the concept of merging sorted sub-arrays.
