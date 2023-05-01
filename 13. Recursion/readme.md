@@ -146,3 +146,31 @@ That is in 11 iterations this is computed wheareas it wouldve taken 1024 iterati
 
 - Bubble sort using recursion: In Bubble sort our aim is to get the largest element to the last and repeat it, hence recursion can be used
 - We use iteration to find the largest element and swap it with the last  element, and recursively do this process until the size of the array left is 1 or 0
+
+
+
+
+### Lec 5
+
+**Merge sort very important topic** 
+
+#### Merge sort
+
+
+- Divide the array into two, NOTE: mid = (s+e)/2 , NOTE THAT s=0 FOR THE START, so for an example of array of length 7, ITR WILL BE (0+6)/2 = 3, ie IT WILL DIVIDE THE ARRAY INTO 4 bits and 3 bits resp.
+
+
+
+<br />
+ 
+
+ APPROACHES
+
+ - Create new array when breaking and copy the value
+ - use indexes
+
+
+
+ IMPORTANT THINGS TO REMBER:
+ - IN MergeSort FUNCTION , THE BASE CASE SHOULD BE if (s>=e) return; , EQUAL TO SIGN IS IMP, othwerwise infinite loop
+ - to delete an array syntax: delete []first;
