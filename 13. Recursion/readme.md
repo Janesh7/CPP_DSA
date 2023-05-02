@@ -434,6 +434,8 @@ We can get an idea of an average case by considering the case when partition put
 The solution of the above recurrence is also O(N * logN):
 
 
+- Space complexity of quick sort is O(n)
+
 
 
 
