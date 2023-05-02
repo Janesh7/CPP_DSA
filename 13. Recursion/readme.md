@@ -235,8 +235,68 @@ No, In merge sort the merging step requires extra space to store the elements.
 
 Yes, merge sort is stable. 
 
+--------------------- TBC-------------------------------
 
 
+### Stability Of sorting Algos
+<b>WHAT IS STABLE SORTING ALGO</b>
+
+
+*A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input data set*
+
+
+Informally, stability means that equivalent elements retain their relative positions, after sorting.
+
+- Do we care for simple arrays like the array of integers? 
+When equal elements are indistinguishable, such as with integers, or more generally, any data where the entire element is the key, stability is not an issue. Stability is also not an issue if all keys are different.
+
+- Where stable sorting algorithms are useful?
+ Consider the following dataset of Student Names and their respective class sections.
+
+```
+ \\ (Dave, A)\\ (Alice, B)\\ (Ken, A)\\ (Eric, B)\\ (Carol, A) 
+```
+If we sort this data according to name only, then it is highly unlikely that the resulting dataset will be grouped according to sections as well. 
+
+```
+\\ (Alice, B)\\ (Carol, A)\\ (Dave, A)\\ (Eric, B)\\ (Ken, A) 
+```
+
+So we might have to sort again to obtain the list of students section-wise too. But in doing so, if the sorting algorithm is not stable, we might get a result like this:
+
+```
+\\ (Carol, A)\\ (Dave, A)\\ (Ken, A)\\ (Eric, B)\\ (Alice, B) 
+```
+
+The dataset is now sorted according to sections, but not according to names. In the name-sorted dataset, the tuple (Alice, B) was before (Eric, B) , but since the sorting algorithm is not stable, the relative order is lost. If on the other hand, we used a stable sorting algorithm, the result would be:
+
+```
+\\ (Carol, A)\\ (Dave, A)\\ (Ken, A)\\ (ALice, B)\\ (Eric, B) 
+```
+
+Here the relative order between different tuples is maintained. It may be the case that the relative order is maintained in an Unstable Sort but that is highly unlikely.
+
+- Which sorting algorithms are stable? 
+
+Some Sorting Algorithms are stable by nature, such as Bubble Sort, Insertion Sort, Merge Sort, Count Sort, etc. Comparison-based stable sorts such as Merge Sort and Insertion Sort maintain stability by ensuring that Element A[j] comes before A[i] if and only if A[j] < A[i], here i, j are indices, and i < j. The relative order is preserved if A[i] \equiv A[j] i.e. A[i] comes before A[j]
+
+
+
+Other non-comparison-based sorts such as Counting Sort maintain stability by ensuring that the Sorted Array is filled in reverse order so that elements with equivalent keys have the same relative position. Some sorts such as Radix Sort depend on another sort, with the only requirement that the other sort should be stable.
+
+
+- Which sorting algorithms are unstable? 
+
+Quick Sort, Heap Sort etc., can be made stable by also taking the position of the elements into consideration. This change may be done in a way that does not compromise a lot on the performance and takes some extra space, possibly \theta(n)     .
+
+- Can we make any sorting algorithm stable? 
+
+Any given sorting algorithm which is not stable can be modified to be stable. There can be algorithm-specific ways to make it stable, but in general, any comparison-based sorting algorithm which is not stable by nature can be modified to be stable by changing the key comparison operation so that the comparison of two keys considers position as a factor for objects with equal keys.
+
+
+
+
+------------------------------------------------------- <continued> ----------------------------
 
 - How can we make Merge sort more efficient?
 
@@ -314,10 +374,248 @@ Sometimes they ask as it is, theory + code
 
 1. We count all the elemrnts which are less than pivot
 
-2. put the pivot in count+1 place from above step
+2. put the pivot in count+start place from above step
 
 3. After this we make sure that the elements of the left and right side are accordingly
 
 4. We use two pointer, each coming from the sides and we find abnormal elements(which are nit in their resp side) and swap them.
 
 5. This process is repeated for each of the array recursively
+
+
+
+#### Theory
+
+Analysis of QuickSort:
+
+
+
+Time taken by QuickSort, in general, can be written as follows. 
+```
+ T(n) = T(k) + T(n-k-1) + \theta    (n)
+```
+
+The first two terms are for two recursive calls, the last term is for the partition process. k is the number of elements that are smaller than the pivot. 
+
+
+
+- Worst Case:
+The worst case occurs when the partition process always picks the first or last element as the pivot. If we consider the above partition strategy where the last element is always picked as a pivot, the worst case would occur when the array is already sorted in increasing or decreasing order. Following is the recurrence for the worst case.
+
+```
+T(N) = T(0) + T(N-1) + \theta    (N) which is equivalent to 
+T(N) = T(N-1) + \theta    (N)
+```
+<br />
+The solution to the above recurrence is O(n2). 
+
+- Best Case:
+The best case occurs when the partition process always picks the middle element as the pivot. The following is recurrence for the best case. 
+
+```
+ T(N) = 2T(N/2) + \theta   (N)
+```
+
+**The solution for the above recurrence is O(N * logN). It can be solved using case 2 of the Master Theorem.**
+
+
+- Average Case:
+To do an average case analysis, we need to consider all possible permutations of the array and calculate the time taken by every permutation which doesn’t look easy.
+
+
+
+We can get an idea of an average case by considering the case when partition puts O(N/9) elements in one set and O(9N/10) elements in the other set. Following is the recurrence for this case.  
+
+```
+ T(N) = T(N/9) + T(9N/10) + \theta   (N)
+```
+
+
+The solution of the above recurrence is also O(N * logN):
+
+
+
+
+
+**Although the worst case time complexity of QuickSort is O(N2) which is more than many other sorting algorithms like Merge Sort and Heap Sort, QuickSort is faster in practice, because its inner loop can be efficiently implemented on most architectures and in most real-world data. QuickSort can be implemented in different ways by changing the choice of pivot so that the worst case rarely occurs for a given type of data. However, merge sort is generally considered better when data is huge and stored in external storage.**
+
+#### Advantages of Quick Sort:
+
+- It is a divide-and-conquer algorithm that makes it easier to solve problems.
+- It is efficient on large data sets.
+- It has a low overhead, as it only requires a small amount of memory to function.
+- Disadvantages of Quick Sort:
+- It has a worst-case time complexity of O(N2), which occurs when the pivot is chosen poorly.
+- It is not a good choice for small data sets.
+- It is not a stable sort, meaning that if two elements have the same key, their relative order will not be preserved in the sorted output in case of quick sort, because here we are swapping elements according to the pivot’s position (without considering their original positions).
+
+
+#### Some Frequently asked Questions (FAQs) on QuickSort:
+
+- Hoare’s vs Lomuto Partition
+
+Please note that the above implementation is Lomuto Partition(Last element as pivot and no two pointer approach is used). A more optimized implementation of QuickSort is Hoare’s partition which is more efficient than Lomuto’s partition scheme because it does three times less swaps on average.(uses two pointers as implemented in code and hence uses less swaps)
+
+
+
+- How to pick any element as pivot?
+
+With one minor change to the above code, we can pick any element as pivot. For example, to make the first element as pivot, we can simply swap the first and last elements and then use the same code. Same thing can be done to pick any random element as a pivot 
+
+- Is QuickSort stable?
+
+The default implementation is not stable. However, any sorting algorithm can be made stable by considering indices as a comparison parameter. 
+
+- Is QuickSort In-place?
+
+As per the broad definition of in-place algorithm, it qualifies as an in-place sorting algorithm as it uses extra space only for storing recursive function calls but not for manipulating the input. 
+
+- What is 3-Way QuickSort?
+
+In simple QuickSort algorithm, we select an element as pivot, partition the array around pivot and recur for subarrays on left and right of pivot. 
+Consider an array which has many redundant elements. For example, {1, 4, 2, 4, 2, 4, 1, 2, 4, 1, 2, 2, 2, 2, 4, 1, 4, 4, 4}. If 4 is picked as pivot in Simple QuickSort, we fix only one 4 and recursively process remaining occurrences. In 3 Way QuickSort, an array arr[l..r] is divided in 3 parts: 
+
+1. arr[l..i] elements less than pivot. 
+2. arr[i+1..j-1] elements equal to pivot. 
+3. arr[j..r] elements greater than pivot. 
+
+- How to implement QuickSort for Linked Lists?
+QuickSort on Singly Linked List (TBD)
+QuickSort on Doubly Linked List (TBD)
+
+
+- Can we implement QuickSort Iteratively?
+Yes, please refer Iterative Quick Sort.
+
+**IMPORTANT:  Why Quick Sort is preferred over MergeSort for sorting Arrays ?**
+- Quick Sort in its general form is an **in-place sort** (i.e. it doesn’t require any extra storage) whereas merge sort requires O(N) extra storage, N denoting the array size which may be quite expensive. 
+
+
+- Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm. Comparing average complexity we find that both types of sorts have O(N logN) average complexity but the constants differ. For arrays, merge sort loses due to the use of extra O(N) storage space.
+Most practical implementations of Quick Sort use randomized versions. The randomized version has an expected time complexity of O(N logN). The worst case is possible in the randomized version also, but the worst case doesn’t occur for a particular pattern (like sorted array) and randomized Quick Sort works well in practice.
+
+
+- Quick Sort is also a **cache friendly** sorting algorithm as it has a good locality of reference when used for arrays.
+
+
+- Quick Sort is also **tail recursive**, therefore tail call optimizations are done.
+
+**IMPORTANT Why MergeSort is preferred over QuickSort for Linked Lists ?**
+- In the case of linked lists, the case is different mainly due to the difference in memory allocation of arrays and linked lists. Unlike arrays, linked list nodes may not be adjacent in memory. 
+
+- Unlike arrays, in linked lists, we can insert items in the middle in O(1) extra space and O(1) time. Therefore merge operation of merge sort can be implemented without extra space for linked lists.
+
+- Unlike arrays, we can not do random access in linked lists. Quick Sort requires a lot of this kind of access. In a linked list to access the ith index, we have to travel each and every node from the head to ith node as we don’t have a continuous block of memory. Therefore, the overhead increases for quicksort. Merge sort accesses data sequentially and the need for random access is low. 
+
+
+
+**How to optimize QuickSort so that it takes O(log N) extra space in the worst case?**
+
+- As the recursion call is performed at the end of the recursive function, we can use the concept of tail recursion to optimize the space taken by Quicksort. Please refer to QuickSort Tail Call Optimization (Reducing worst case space to log N).
+
+
+**Conclusion:**
+To sum up, it can be said that Quicksort is a fast and efficient sorting algorithm with an average time complexity of O(N logN). It is a divide-and-conquer algorithm that breaks down the original problem into smaller subproblems that are easier to solve. It can be easily implemented in both iterative and recursive forms and it is efficient on large data sets, and can be used to sort data in place. However, it also has some drawbacks such as the worst case time complexity of O(N2) which occurs when the pivot is chosen poorly. The performance of quicksort is sensitive to the choice of the pivot.
+
+### Tail Call Recursion used for optimizing
+
+*Tail recursion is defined as a recursive function in which the recursive call is the last statement that is executed by the function. So basically nothing is left to execute after the recursion call.*
+
+For example the following C++ function print() is tail recursive.
+
+```
+// An example of tail recursive function
+ 
+static void print(int n)
+{
+    if (n < 0)
+        return;
+    cout << " " << n;
+  
+    // The last executed statement is recursive call
+    print(n - 1);
+}
+```
+
+ 
+Time Complexity: O(n)
+Auxiliary Space: O(n)
+
+**Need for Tail Recursion:**
+
+- The tail recursive functions are considered better than non-tail recursive functions as tail-recursion can be optimized by the compiler. 
+
+- Compilers usually execute recursive procedures by using a stack. This stack consists of all the pertinent information, including the parameter values, for each recursive call. When a procedure is called, its information is pushed onto a stack, and when the function terminates the information is popped out of the stack. Thus for the non-tail-recursive functions, the stack depth (maximum amount of stack space used at any time during compilation) is more. 
+
+- The idea used by compilers to optimize tail-recursive functions is simple, since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use (See this for more details).
+
+
+
+Q. Can a non-tail-recursive function be written as tail-recursive to optimize it?
+
+
+
+Consider the following function to calculate the factorial of n. 
+
+It is a non-tail-recursive function. Although it looks like a tail recursive at first look. If we take a closer look, we can see that the value returned by fact(n-1) is used in fact(n). So the call to fact(n-1) is not the last thing done by fact(n).
+
+```
+#include <iostream>
+using namespace std;
+ 
+// A NON-tail-recursive function.  The function is not tail
+// recursive because the value returned by fact(n-1) is used
+// in fact(n) and call to fact(n-1) is not the last thing
+// done by fact(n)
+unsigned int fact(unsigned int n)
+{
+    if (n <= 0)
+        return 1;
+ 
+    return n * fact(n - 1);
+}
+ 
+// Driver program to test above function
+int main()
+{
+    cout << fact(5);
+    return 0;
+}
+Output
+120
+Time Complexity: O(n)
+Auxiliary Space: O(n)
+```
+
+The above function can be written as a tail-recursive function. The idea is to use one more argument and accumulate the factorial value in the second argument. When n reaches 0, return the accumulated value.
+
+
+Below is the implementation using a tail-recursive function.
+
+```
+#include <iostream>
+using namespace std;
+ 
+// A tail recursive function to calculate factorial
+unsigned factTR(unsigned int n, unsigned int a)
+{
+    if (n <= 1)
+        return a;
+ 
+    return factTR(n - 1, n * a);
+}
+ 
+// A wrapper over factTR
+unsigned int fact(unsigned int n) { return factTR(n, 1); }
+ 
+// Driver program to test above function
+int main()
+{
+    cout << fact(5);
+    return 0;
+}
+Output
+120
+Time Complexity: O(n)
+Auxiliary Space: O(1)
+```
