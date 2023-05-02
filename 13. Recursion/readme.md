@@ -83,7 +83,7 @@ Refer PDF FOR RECURSION TREE TO EASILY UNDERSTAND IT, SAME AS FIB
 
 
 
-### VID 3
+## VID 3
 
 Q Is Sorted question using recursion
 
@@ -92,7 +92,7 @@ Q Is Sorted question using recursion
 - recursive function call: call the function while passing the second elements index in the function,and reducing the size by 1
 
 
-### VID 4
+## VID 4
 
 
 Exponent using recursion (optimised)
@@ -150,11 +150,11 @@ That is in 11 iterations this is computed wheareas it wouldve taken 1024 iterati
 
 
 
-### Lec 5
+## Lec 5
 
 **Merge sort very important topic** 
 
-#### Merge sort
+### Merge sort
 
 
 - Divide the array into two, NOTE: mid = (s+e)/2 , NOTE THAT s=0 FOR THE START, so for an example of array of length 7, ITR WILL BE (0+6)/2 = 3, ie IT WILL DIVIDE THE ARRAY INTO 4 bits and 3 bits resp.
@@ -251,7 +251,7 @@ A merge sort consists of several passes over the input. The first pass merges se
 
 
 
-##### IMPORTANT Applications of Merge Sort: 
+#### IMPORTANT Applications of Merge Sort: 
 
 - **Merge sort is often preferred for sorting a linked list. The slow random-access performance of a linked list makes some other algorithms (such as quicksort) perform poorly, and others (such as heapsort) completely impossible.** 
 
@@ -267,7 +267,7 @@ A merge sort consists of several passes over the input. The first pass merges se
 
 - Inversion Count Problem
 
-##### Advantages of Merge Sort:
+#### Advantages of Merge Sort:
 
 - Stability: Merge sort is a stable sorting algorithm, which means it maintains the relative order of equal elements in the input array. This makes it useful in applications where preserving the original order of equal elements is important.
 
@@ -282,7 +282,7 @@ A merge sort consists of several passes over the input. The first pass merges se
 - Adaptability: Merge sort can be adapted to handle different input distributions, such as partially sorted, nearly sorted, or completely unsorted data. This makes it useful in a variety of real-world applications.
 
 
-##### Drawbacks of Merge Sort:
+#### Drawbacks of Merge Sort:
 
 - Space complexity: Merge sort requires additional memory to store the merged sub-arrays during the sorting process. This can be a disadvantage in applications with limited memory resources.
 
@@ -293,3 +293,31 @@ A merge sort consists of several passes over the input. The first pass merges se
 - Not always optimal for small datasets: Merge sort has a higher time complexity than some other sorting algorithms, such as insertion sort, for small datasets. This can result in slower performance for very small datasets.
 
 - Complexity of implementation: Merge sort can be more complex to implement than some other sorting algorithms, particularly for developers who are not familiar with recursive algorithms or the concept of merging sorted sub-arrays.
+
+
+
+
+
+## Lec 6 - Quick Sort
+
+### Quick Sort
+
+Sometimes they ask as it is, theory + code
+
+
+
+- Quick sort is smth opposite to merge sort, in merge sort we break the array first into two and then merge accordingly(sorted), In quick sort we do the opposite ie we partion the array such that the element of the left side partion is less than the element and the other side partion is greater
+
+- In this approach we select an element and put it in the rigth place ie after sorting.  And make sure the left side elements are smaller than it and right side elements are larger
+
+- element which should be put into the rigth place is called pivot
+
+1. We count all the elemrnts which are less than pivot
+
+2. put the pivot in count+1 place from above step
+
+3. After this we make sure that the elements of the left and right side are accordingly
+
+4. We use two pointer, each coming from the sides and we find abnormal elements(which are nit in their resp side) and swap them.
+
+5. This process is repeated for each of the array recursively
