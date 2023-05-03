@@ -356,7 +356,19 @@ A merge sort consists of several passes over the input. The first pass merges se
 
 
 
-
+#### **IMP POINTS TO REMEMBER WHILE CODING**
+- REMEMBER THE RELATIVE POS/LEN
+- write base case if (s>=e) return; U CAN USE == 
+- Use length variables for both the arrs, remember to use relative length **l1=mid-s+1** (as start would be 0) , **l2 = e-mid**
+- How to create dynamic arrays 
+```
+int *first = new int[len1];
+int *second = new int[len2];
+delete []first;
+delete []second;
+```
+- when copying the elements 
+- while merging the mainIndex starts from s
 
 ## Lec 6 - Quick Sort
 
@@ -621,3 +633,13 @@ Output
 Time Complexity: O(n)
 Auxiliary Space: O(1)
 ```
+
+
+
+#### **IMPORTANT POINTS TO REMEMBER WHILE CODING**
+
+- Return statement in quicksort funtion: if (s>=e) return;
+- quicksort is void func, partion function returns int
+- pivot and pivotIndex vars
+- Remember to make pivotIndex as **s+count** instead of just count, similiarly remember for loop vars
+- in while loop remember to put if condition as while loop coz otherwise it will do an extra swap which should be returned
