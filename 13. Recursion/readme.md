@@ -643,3 +643,20 @@ Auxiliary Space: O(1)
 - pivot and pivotIndex vars
 - Remember to make pivotIndex as **s+count** instead of just count, similiarly remember for loop vars
 - in while loop remember to put if condition as while loop coz otherwise it will do an extra swap which should be returned
+
+
+
+## Lec 7- Subsets and subsequences
+
+
+
+Subset problem:
+
+
+Find the power set of the given set
+
+
+- We recursively solve this
+- we take input set and output set as arguments
+- we take two process in one we exclude the element at the index and in the other we include the elememt
+- so including and excluding all the elements give the all the required subsets. Refer pdf
