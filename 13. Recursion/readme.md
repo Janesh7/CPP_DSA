@@ -650,13 +650,26 @@ Auxiliary Space: O(1)
 
 
 
-Subset problem:
+**Subset problem:**
 
 
 Find the power set of the given set
+
+
+2^n answers
 
 
 - We recursively solve this
 - we take input set and output set as arguments
 - we take two process in one we exclude the element at the index and in the other we include the elememt
 - so including and excluding all the elements give the all the required subsets. Refer pdf
+
+
+
+**SubSequence**
+
+
+- Similar to above
+- take the whole string and start removing elements 1 by 1 and including & excluding them each time
+- take the whole string and empty output string in start , start including excluding elements
+- logic exactly same as before
