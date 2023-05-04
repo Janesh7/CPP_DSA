@@ -1,6 +1,7 @@
 void solve(vector<string>& ans, string str, string output, int i) {
     //base case
     if(i>=str.length()) {
+    // If the index goes out then save the outout and return
         if(output.length()>0)
         ans.push_back(output);
         return ;
