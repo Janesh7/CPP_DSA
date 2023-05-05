@@ -653,6 +653,8 @@ Auxiliary Space: O(1)
 **Subset problem:**
 
 
+**IMP - SUBSET APPROACH**
+
 Find the power set of the given set
 
 
@@ -663,7 +665,7 @@ Find the power set of the given set
 - we take input set and output set as arguments
 - we take two process in one we exclude the element at the index and in the other we include the elememt
 - so including and excluding all the elements give the all the required subsets. Refer pdf
-
+- **IMP BASE CASE - WHEN THE INDEX goes outside of the array PUSH THE OUTPUT STRING TO THE ANS ARRAY**
 
 
 **SubSequence**
@@ -673,3 +675,23 @@ Find the power set of the given set
 - take the whole string and start removing elements 1 by 1 and including & excluding them each time
 - take the whole string and empty output string in start , start including excluding elements
 - logic exactly same as before
+
+
+
+## Lec 8 - Phone keypad problem
+
+
+Similiar to the previous question.. but does have backtracking gist aswell
+
+
+Approach
+
+- Similar to prev question, but
+- here we have a mapping , it is an array of string, each index corresponding to its resp string on the dial pad.
+- Same base case
+- REMEMBER to extract the number out of the string (for index) by subtracting the char by '0'
+- get the string and iterate through it
+- while iterating int the for loop:
+-   FIRST: push the char and 
+-   solve the function
+-   SECOND: BACKTRACK to the previous step as u dont want the same string to be for the other, check the tree (ex. We have done for all the char for 'a' but now to do the same for 'b' we dont need a, so pop it ), POP THE PREV ELEMENT 
