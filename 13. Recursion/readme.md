@@ -695,3 +695,18 @@ Approach
 -   FIRST: push the char and 
 -   solve the function
 -   SECOND: BACKTRACK to the previous step as u dont want the same string to be for the other, check the tree (ex. We have done for all the char for 'a' but now to do the same for 'b' we dont need a, so pop it ), POP THE PREV ELEMENT 
+
+
+Example: 89
+
+
+Refer the pdf in Lec 8
+
+
+wkt 8->tuv, and 9->wxyz
+
+- Starts with '89' and '' as output string and index=0
+- i = 1, takes 't', now i becomes 1, recursive call -> we get 'tw', 'tx', 'ty', 'tz' resp. 
+- In the above point also backtracking take place, like t is considered. 'w' is added to the string 't' and then removed (backtrack) and then  'x' is added and removed again and so on.
+- Now we need to BACKTRACK, hence t is poped out and hence the process is repeated for 'u' , as it is recursive the calls finished and go back and so 'u' is considered. 
+- Similarly all the cases are done and the vector is returned.
