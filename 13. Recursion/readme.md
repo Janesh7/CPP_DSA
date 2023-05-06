@@ -722,3 +722,41 @@ for example take, 3
 - Now d isnt delted and e is considered and hence 'de' is added,
 - again goes back, and now since previous output arent deleted 'def'is taken and hence many possible soln are missed 
 - in the recursion we get output considering the level of the tree, ie for level 1 it should have all the numbers with one click ie 'd', 'e', 'f' should be the output for that level and not the wrong op we got here ie, 'd', 'de', 'def'.
+
+
+
+## Lec 9 - Permutations in a String
+
+
+**IMP - VERY IMP problem , asked as it is in exam**
+
+
+Given a string , we need to find all possible permutation of a string
+
+
+- Given a string of size n. we get n! permutations, Ex 'abc' , n! = 6
+
+
+```
+'abc' 'acb' 
+'bac' 'bca'
+'cab' 'cba'
+```
+
+1. Approach:
+- 1 data structure for the output and create 1 map to check if which box is filledand which isnt and based on that the perm is created.
+- Space complexity is high so not using
+
+
+2. Approach 2 - Swap
+
+
+See pdf for rec tree
+
+
+- consider 'abc' we start with index 0 and swap, 
+- 1 - so 'a' is swapped with itself (means 'a' is at 1st pos) ,
+- 1.1 and 1.2 - Now i is at 'b' and then same is done for considering 'b' and 'c' and then backtrack to root, gives 'abc' and 'acb'
+- 2 - then 'a' is swapped with 'b' and hence b at first place and above step 2.1 and 2.2 (a,c r swapped) is done giving 'bac' and 'bca' 
+- then 'c' is swapped with 'a' and c is at the first place and above step ...
+- hence 6 perms r got
