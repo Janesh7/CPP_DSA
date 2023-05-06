@@ -710,3 +710,15 @@ wkt 8->tuv, and 9->wxyz
 - In the above point also backtracking take place, like t is considered. 'w' is added to the string 't' and then removed (backtrack) and then  'x' is added and removed again and so on.
 - Now we need to BACKTRACK, hence t is poped out and hence the process is repeated for 'u' , as it is recursive the calls finished and go back and so 'u' is considered. 
 - Similarly all the cases are done and the vector is returned.
+
+
+
+Now Lets consider we dont backtrack and exclude that pop_back line
+
+
+for example take, 3
+- 3 -> 'def'
+- In the first iteration, 'd' is considered , i is incremented and is outside the length(only one number 3), hence goes back, 
+- Now d isnt delted and e is considered and hence 'de' is added,
+- again goes back, and now since previous output arent deleted 'def'is taken and hence many possible soln are missed 
+- in the recursion we get output considering the level of the tree, ie for level 1 it should have all the numbers with one click ie 'd', 'e', 'f' should be the output for that level and not the wrong op we got here ie, 'd', 'de', 'def'.
