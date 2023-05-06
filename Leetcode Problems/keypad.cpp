@@ -46,7 +46,7 @@ private:
         string value = mapping[number];
 
 
-        // Traverse through the whole string, 1 by 1 add each and solve and at the last remove the element and continue the for loop as we want other char unique values as well, See diagram in the Recursion Lec 8 video 
+        // Traverse through the whole string, 1 by 1 add each and solve and at the last remove the element (backtrack) and continue the for loop as we want other char unique values as well, See diagram in the Recursion Lec 8 video 
         for(int i=0; i<value.length(); i++) {
             output.push_back(value[i]);
             solve(digit, output, index+1, ans, mapping);
