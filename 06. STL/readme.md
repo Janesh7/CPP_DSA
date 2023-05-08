@@ -56,6 +56,14 @@ To run for loops using the iterators:
     for (int i:v)
         cout<<I;
 
+
+**To make a 2d vector with all values initailized as 0**
+
+```
+vector<vector<int>> visited (n,vector<int>(n,0));
+```
+
+
 ## Deque
 DOUBLY ENDED QUQUE(deq)
 - We can push/pop from BOTH th ends
