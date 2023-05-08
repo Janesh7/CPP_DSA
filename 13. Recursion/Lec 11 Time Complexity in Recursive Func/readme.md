@@ -72,4 +72,52 @@ exponential
 
 
 
+
+# Space Complexity
+
+Space required as a function of input, f(n)
+
+- The space complexity is difficult to find as it might take different memory at different time (graph)
+- Therefore we say the maximum space complexity over the time as the space complexity
+
+**IMP- Calculate the space complexity of 1 call, and then muliply it to the number of times the func is called  || For recursion trees we need to consider the recursion tree depth**
+
+
+1. Factorial
+
+we r just using a constant space of k of all the ints and stuff
+
+**SC: O(k*n) -> O(n)**
+
+
+
+2. Binary search
+we r just using a constant space of k of all the ints and stuff
+
+
+**SC: O(log2n) or O(logn)**
+
+
+3. Merge sort
+Firstly 
+- we r just using a constant space of k of all the ints (mid) and stuff
+- and that is called for logn times 
+Secondly we r creating a new array to store the values but also deleting it with each call
+- we need consider the maximum space complexity and that will be for the main array of length n
+- so totally klogn + n, we can neglect klogn as n is greater, hence 
+
+
+**SC: O(N)**
+
+
+
+
+4. Fibonacci series
+- consider the max depth of the tree
+- which is n, which takes K spaces
+
+**SC: O(N)**
+
+
+Time complexity of all sorting methods
 ![App Screenshot](https://www.aprogrammerlife.com/images/pictuers/array_sorting_algorithms_bigo_complexity_chart.jpg)
