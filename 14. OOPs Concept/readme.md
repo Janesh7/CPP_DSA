@@ -70,28 +70,33 @@ Size of the class should be sum of all the non-static data member+ padding, whic
 
 ![App Screenshot](https://www.includehelp.com/cpp-tutorial/Images/size-of-a-class-1.jpg)
 
-C++ | size of a class (1)
-Above is the alignment of class A and that's why the size of the class is 8 Bytes. Static data members and member functions have no contribution.
+Above is the alignment of class A and that's why the size of the class is 8 Bytes. **Static data members and member functions have no contribution.**
 
-How compiler adds padding?
-Now the question is how compiler adds padding and align? The method is compiler dependent and kind of greedy. It aligns till the boundary of maximum memory allocated.
+
+## How compiler adds padding?
+
+Now the question is how compiler adds padding and align? The method is compiler dependent and kind of greedy. **It aligns till the boundary of maximum memory allocated.**
 
 Here we find that max memory allocated is 8 Bytes, thus all the data members acquire 8 Bytes and the total size is 32 Bytes. Now the question is will it happen every time similarly?
 
 
 
-Is it like the number of data members * max datatype size?
+- Is it like the number of data members * max datatype size?
 
 
-The answer is no. It will try to align optimally keeping the same order. To check an example please follow the article on structure size in C. Also, later in this article, we have instances of such.
+The answer is no. **It will try to align optimally keeping the same order.** Check the example next
 
-Size of a derived class
-What is the size of a derived class? Of course, a derived class has all data members of the base class it inherits and does it has its own copied of those data members too. Thus size should be the size of base class data members + size of derived class data members.
+## Size of a derived class
+
+
+**What is the size of a derived class? Of course, a derived class has all data members of the base class it inherits and does it has its own copied of those data members too. Thus size should be the size of base class data members + size of derived class data members.**
 
 Let's check the below code and the output.
 
 In the above structure, we find that the size is 24 Bytes though the same data members have been used. This is due to the change in the order of the member declaration. In this case, the alignment and padding would be like below:
 
+
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -169,18 +174,28 @@ Size of class Base: 8
 Size of object b: 8
 Size of class Derived: 16
 Size of object d: 16
+```
+
+
 So here the size of the base class object is 8 bytes, whereas the size of the derived class object is 16 Bytes.
 
 For the base class it's similar like below:
 
-C++ | size of a class (2)
+![App Screenshot](https://www.includehelp.com/cpp-tutorial/Images/size-of-a-class-2.jpg)
+
+
 While for the derived class it's like:
 
-C++ | size of a class (3)
-So the thing is the order of data members are being maintained. And since we know that the base class constructor is invoked first, that's why the base class members come first.
+
+![App Screenshot](https://www.includehelp.com/cpp-tutorial/Images/size-of-a-class-3.jpg)
+
+
+
+**So the thing is the order of data members are being maintained. And since we know that the base class constructor is invoked first, that's why the base class members come first.**
 
 Now let's change the order of data member in the derived class and check the size of the class & object.
 
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -258,21 +273,27 @@ Size of class Base: 8
 Size of object b: 8
 Size of class Derived: 12
 Size of object d: 12
+```
+
+
 Just changing the order of member we found that derived class is having size 12 Bytes now. So there must be some better alignment now.
 
-So, as we can think of compiler went for greedy alignment and now it's able to align optimally (Remember compiler can’t change the order of data member).
+**So, as we can think of compiler went for greedy alignment and now it's able to align optimally (Remember compiler can’t change the order of data member).**
 
-C++ | size of a class (4)
+![App Screenshot](https://www.includehelp.com/cpp-tutorial/Images/size-of-a-class-4.jpg)
 Above is the alignment for the Derived class and now the size is 12 Bytes, instead of 16 because of the above alignment. We saw that compiler keeps aligning greedily & that's why it aligned char b of base class member & char d, which is its member, in the same row. When it tried to align int c, it could not as only 2 bytes were left. But instead of int, if it was char only then it would have aligned in the same line.
 
-The virtual keyword and its effect on size
+
+## The virtual keyword and its effect on size
+
 We know in the derived class it can inherit the base class as virtual too. What would be the size of the derived class in that case? Will there be any changes?
 
-The answer is yes. There will be an additional 8 bytes which is nothing but the size of VTPR (Virtual Table pointer)
+The answer is yes. **There will be an additional 8 bytes which is nothing but the size of VTPR (Virtual Table pointer)**
 
 
 So, for the first derived class example, we got 16 Bytes, but here we have added the virtual keyword and got size 24 Bytes which is due to the size of VTPR.
 
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -350,12 +371,15 @@ Size of class Base: 8
 Size of object b: 8
 Size of class Derived: 24
 Size of object d: 24
+```
+
 So, here we got the idea of a normal class and object size. We learnt how the compiler aligns the data members and add padding. Also, we extended the discussion to the size of the derived class.
 
 To end the discussion let me just throw a brain teaser. What do you think would be the size of an empty class?
 
 Do you think it's 0?
 
+```
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -370,4 +394,6 @@ int main()
 Output:
 
 Size of class A: 1
-Well, the size of the empty class is not 0. This is actually to ensure that two different objects will have different addresses.
+```
+
+Well, the size of the empty class is not 0. **This is actually to ensure that two different objects will have different addresses.**
