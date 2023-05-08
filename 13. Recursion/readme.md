@@ -781,6 +781,10 @@ IMP:
 - When function call returns mark the cell unvisited (backtrack for multiple soln)
 
 
-
-
-Refer Lec 11 readme for time complexity for all the above questions
+**Important points to note**: -
+- in the isSafe function take the cond x>=0 and not just x>0 , same for y
+- **For string method push_back, use single quotes, double quotes gives error, ie path.push_back('D');**
+- to create a 2d array with all 0
+```
+vector<vector<int>> visited(n, vector<int>(n, 0));
+```
