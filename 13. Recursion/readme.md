@@ -760,3 +760,23 @@ See pdf for rec tree
 - 2 - then 'a' is swapped with 'b' and hence b at first place and above step 2.1 and 2.2 (a,c r swapped) is done giving 'bac' and 'bca' 
 - then 'c' is swapped with 'a' and c is at the first place and above step ...
 - hence 6 perms r got
+
+
+
+## Lec 10 - Rat in a maze problem
+
+Read the problem
+
+
+3 conditons from going (i,j) -> (k,l) safe
+
+- (k,l) shoul be inside the matrix
+- m[k][l] = 1, ie the next cell can be visited by the raty
+- visited[k][l] = 0 , ie the next cell isnt visited
+
+IMP:
+
+
+- After we visit a cell we mark it visited.
+- When function call returns mark the cell unvisited (backtrack for multiple soln)
+
