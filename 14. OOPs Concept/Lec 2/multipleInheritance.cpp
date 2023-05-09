@@ -1,42 +1,43 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
+class Animal
+{
 
-class Animal {
-
-    public:
+public:
     int age;
     int weight;
 
-
-    public:
-    void bark() {
+public:
+    void bark()
+    {
         cout << "Barking " << endl;
     }
 };
 
-class Human {
-    public:
+class Human
+{
+public:
     string color;
 
-    public:
-    void speak() {
+public:
+    void speak()
+    {
         cout << "Speaking " << endl;
     }
 };
 
-//Multiple Inheritance
-class Hybrid: public Animal, public Human {
-
+// Multiple Inheritance
+class Hybrid : public Animal, public Human
+{
 };
 
-
-int main() {
+int main()
+{
 
     Hybrid obj1;
     obj1.speak();
     obj1.bark();
-
 
     return 0;
 }

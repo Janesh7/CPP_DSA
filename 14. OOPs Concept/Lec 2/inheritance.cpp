@@ -1,65 +1,65 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Human {
+class Human
+{
 
-    private:
+private:
     int height;
 
-    public: 
+public:
     int weight;
 
-    private:
+private:
     int age;
 
-    public:
-    int getAge() {
+public:
+    int getAge()
+    {
         return this->age;
     }
 
-    void setWeight(int w) {
+    void setWeight(int w)
+    {
         this->weight = w;
-
     }
-
 };
 
-class Male: private Human {
+class Male : private Human
+{
 
-    public:
+public:
     string color;
 
-    void sleep() {
+    void sleep()
+    {
         cout << "Male Sleeping" << endl;
     }
 
-    int getHeight() {
+    int getHeight()
+    {
         return this->height;
     }
-
 };
 
-
-
-int main() {
+int main()
+{
 
     Male m1;
-    //cout << m1.height << endl;
+    // cout << m1.height << endl;
 
+    /*
+        Male object1;
+        cout << object1.age << endl;
+        cout << object1.weight << endl;
+        cout << object1.height << endl;
 
+        cout << object1.color << endl;
 
-/*
-    Male object1;
-    cout << object1.age << endl;
-    cout << object1.weight << endl;
-    cout << object1.height << endl;
-
-    cout << object1.color << endl;
-
-    object1.setWeight(84);
-    cout << object1.weight << endl;
-    object1.sleep();
-    */
+        object1.setWeight(84);
+        cout << object1.weight << endl;
+        object1.sleep();
+        */
 
     return 0;
 }
