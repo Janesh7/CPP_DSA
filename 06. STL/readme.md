@@ -64,6 +64,9 @@ vector<vector<int>> visited (n,vector<int>(n,0));
 ```
 
 
+
+- **Vectors are passed by value and hence to make any changes they need to be sent as reference. (unlike arrays where a ptr to the 1st element is sent)**
+
 ## Deque
 DOUBLY ENDED QUQUE(deq)
 - We can push/pop from BOTH th ends
