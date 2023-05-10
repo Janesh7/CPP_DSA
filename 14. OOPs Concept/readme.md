@@ -408,6 +408,9 @@ Well, the size of the empty class is not 0. **This is actually to ensure that tw
 Refresher: to create int dynamiclly
 ```
 int *i = new int;
+//also
+char *name;
+name = new char[100];
 ```
 - pointer points to 4 bytes in heap(dynamic memory)
 
@@ -463,4 +466,56 @@ class smth {
 }
 ```
 
-As we can see the name of the variable is same (x)
+As we can see the name of the variable is same (x). if we dont use this, only the local scoped variable is used and the value doesnt get set. Hence we use this keyword to differentaite the variables. Ex this->x = x;
+
+
+- **this keyword stores the address of the current object**
+- this is a pointer which points to the current object.
+- we will call the function from an  object and its addy is used for *this* keyword.
+- if u print the this keyword and address of the object called it will give the same addy.
+Use this code for verification
+```
+...
+// In constructor
+cout<<"this "<<this;
+
+
+// In main function
+cout<<&ramesh;
+
+```
+
+
+- **If we made a(any number) paramterized constructors, then the default constructor by the compile will not be there. so if u try to create a obj without a parameter it gives error.**
+
+- **Copy constructor is always generated**
+
+use Obj o1(o2);
+
+- we can make our own copy constructor
+
+
+- **IMP: When we write our own copy constructor, we MUST use & to PASS BY REFERENCE. This is important as without it, the object will be passed as pass by value, ie it will create a copy of the same (and we r declaring the copy constructor there), hence recursively they will be calling each other infinetly(loop)**
+
+
+
+copy constr -> create temp(as the object is copied in pass by value) -> calls copy constructor to copy the value ... infinite
+
+
+- **Default copy constructor is SHALLOW COPY**
+
+
+Setter for strings 
+```
+void setName(char name[])
+{
+    strcpy(this->name, name);
+}
+```
+
+- If we use default constructor, it makes a shallow copy, it works, but if we change the attr (any array, string of anything which is passed by value) of object 1 , the attr of other object also gets change, hence copy constr is required.
+
+
+
+
+- **Wkt that array, (array of char in the example taken), the parameter is taken as a pointer. so when we copy the object we copy this pointer address. Now both stores the same address as the pointer and changing any would result in a change in both the values. Rest values like int n all r copied and since that is not a address it works fine** 
