@@ -519,3 +519,203 @@ void setName(char name[])
 
 
 - **Wkt that array, (array of char in the example taken), the parameter is taken as a pointer. so when we copy the object we copy this pointer address. Now both stores the same address as the pointer and changing any would result in a change in both the values. Rest values like int n all r copied and since that is not a address it works fine** 
+
+
+
+Therefore always deep copy maually by using own copy constr using **strcpy**
+
+```
+Hero(Hero &temp)
+{
+
+    char *ch = new char[strlen(temp.name) + 1];
+    strcpy(ch, temp.name);
+    this->name = ch;
+
+    cout << "Copy constructor called" << endl;
+    this->health = temp.health;
+    this->level = temp.level;
+}
+```
+
+
+**Copy assignment operator '='**
+let two object a, b be alr created, then a=b; would do a.x1 = b.x1 , a.x2 = b.x2 and so on
+
+
+# Destructor
+
+- memory deallocation
+- called before destroyin an object
+- no return type like constructor and no params as well
+- ~ is used before the class name -> desctructor
+- **IMP : whichever object is statically created, the destructor is called automatically, but for DYNAMICALLY ALLOCATED OBJECTS, IT SHOULD be called MANUALLY ie delete obj;**
+
+
+
+# Const keyword
+
+NOTE:
+
+"int x{10};" (**uniform initialization**): This syntax uses curly braces ({}) for initialization and is part of the uniform initialization introduced in C++11. It provides a consistent initialization mechanism for different types. It enforces stricter type checking and prevents narrowing conversions. For example, if you try to initialize a floating-point variable using "int x{10.5};", it will result in a compilation error. Uniform initialization also allows you to initialize aggregates (e.g., arrays or structs) using the same syntax.
+
+
+**Const keyword**
+
+
+
+1. **`const` in Pointers:**
+   - `const` can be used to declare a pointer to a constant object. For example:
+   
+     ```cpp
+     const int* ptr;
+     ```
+   
+     This means that `ptr` is a pointer to an integer that is treated as constant. It allows you to read the value pointed to by `ptr`, but you cannot modify that value through `ptr`. However, you can make `ptr` point to a different address.
+   
+   - To create a constant pointer (where the pointer itself cannot be modified to point to a different address), you can use:
+   
+     ```cpp
+     int* const ptr;
+     ```
+   
+     Here, `ptr` is a constant pointer to an integer. It means that `ptr` always points to the same address, but you can modify the value at that address.
+   
+   - Additionally, you can combine both forms to create a constant pointer to a constant object:
+   
+     ```cpp
+     const int* const ptr;
+     ```
+   
+     This creates a constant pointer to a constant integer, where both the pointer and the value it points to are treated as constant.
+   
+2. **`const` in Objects:**
+   - When `const` is used with an object, it indicates that the **object itself is treated as constant**, and its member variables cannot be modified.
+   
+     ```cpp
+     class MyClass {
+     public:
+         void doSomething() const;
+     };
+     ```
+   
+     In this example, the member function `doSomething()` is declared as `const`. It means that this function is not allowed to modify the member variables of the object it is called on (unless they are explicitly marked as `mutable`).
+   
+3. **`const` Functions, Parameters, and Return Types:**
+   - When `const` is used with a function, it indicates that the function **does not modify the state of the object** it is called on.
+   
+     ```cpp
+     class MyClass {
+     public:
+         int getValue() const;
+     };
+     ```
+   
+     In this case, the member function `getValue()` is declared as `const`, indicating that it does not modify the internal state of the object and is safe to call on constant objects.
+   
+   - `const` can also be used with function parameters. When a parameter is declared as `const`, it means that the function guarantees not to modify the value of that parameter.
+   
+     ```cpp
+     void printValue(const int x);
+     ```
+   
+     Here, `printValue` takes a constant integer as a parameter, ensuring that the function does not modify the value of `x`.
+   
+   - Similarly, `const` can be used as a return type to indicate that the **function returns a constant value that should not be modified.**
+   
+     ```cpp
+     const int getConstantValue();
+     ```
+   
+     This function **returns a constant integer value that should not be modified by the caller.**
+
+4. Here, ptr is a pointer to a constant integer. It means that the value pointed to by ptr cannot be modified through ptr, but ptr itself can point to a different address.
+
+Similarly, you can create a constant reference using the const keyword:
+
+```cpp
+const int& ref = x;
+```
+
+In this case, ref is a constant reference to x, and you cannot modify the value of x through ref.
+
+
+
+
+Using `const` in these various contexts helps enforce immutability, prevents accidental modifications, and allows the compiler to optimize code based on the constness of objects, parameters, and return types.
+
+
+
+[More info](https://www.geeksforgeeks.org/const-keyword-in-cpp/)
+
+
+
+1. When the pointer variable point to a const value:
+
+```
+const int* i = &x;
+const char* j = &y;
+
+// Value of x and y can be altered,
+// they are not constant variables
+x = 9;
+y = 'A';
+```
+
+Here in the above case, i and j are two pointer variables that are pointing to a memory location const int-type and char-type, but the value stored at these corresponding locations can be changed as we have done above.
+
+2. When the const pointer variable point to the value:
+
+```
+// x,z are int and other chars
+int* const i = &x;
+ 
+// const pointer(j) pointing
+// to the var y's location
+char* const j = &y;
+
+
+// The values that is stored at the memory location can modified
+// even if we modify it through the pointer itself
+// No CTE error
+*i = 10;
+*j = 'D';
+
+// CTE because pointer variable
+// is const type so the address
+// pointed by the pointer variables
+// can't be changed
+// i = &z;
+// j = &p;
+```
+
+3. When const pointer pointing to a const variable:
+
+```
+int x{ 9 };
+ 
+const int* const i = &x;
+
+// *i=10;  
+// The above statement will give CTE
+// Once Ptr(*i) value is
+// assigned, later it can't
+// be modified(Error)
+```
+
+
+
+
+
+**Pass const-argument value to a non-const parameter of a function cause error: Passing const argument value to a non-const parameter of a function isn’t valid it gives you a compile-time error.**
+
+
+In nutshell, the above discussion can be concluded as follows:
+
+1. int value = 5;         // non-const value
+
+2. const int *ptr_1 = &value;      // ptr_1 points to a “const int” value, so this is a pointer to a const value.
+
+3. int *const ptr_2 = &value;        // ptr_2 points to an “int”, so this is a const pointer to a non-const value.
+
+4. const int *const ptr_3 = &value;   // ptr_3 points to a “const int” value, so this is a const pointer to a const value.
