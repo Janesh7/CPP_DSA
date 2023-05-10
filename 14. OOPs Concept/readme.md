@@ -719,3 +719,134 @@ In nutshell, the above discussion can be concluded as follows:
 3. int *const ptr_2 = &value;        // ptr_2 points to an “int”, so this is a const pointer to a non-const value.
 
 4. const int *const ptr_3 = &value;   // ptr_3 points to a “const int” value, so this is a const pointer to a const value.
+
+
+# Initialization List
+
+In C++, an initialization list is a syntax construct used in the constructor of a class to initialize member variables. It allows you to initialize member variables directly when they are created, before the body of the constructor executes. The initialization list is placed after the constructor's parameter list, separated by a colon ":".
+
+Here's an example to illustrate its usage:
+
+```cpp
+class MyClass {
+private:
+    int x;
+    double y;
+public:
+    MyClass(int a, double b) : x(a), y(b) {
+        // Constructor body
+    }
+};
+```
+
+In the above code, `x` and `y` are initialized using the initialization list. The syntax `x(a)` initializes the member variable `x` with the value of the constructor parameter `a`, and `y(b)` initializes `y` with the value of `b`.
+
+Initialization lists offer several advantages:
+
+1. Efficiency: Initialization lists can be more efficient than assigning values to member variables within the constructor body. When you assign values in the constructor body, the member variables are first default-constructed, and then their values are reassigned. With initialization lists, the member variables are constructed directly with the specified values.
+
+2. Const member variables: If you have `const` member variables or references in your class, you must use the initialization list to assign them a value, as they cannot be assigned after they are constructed.
+
+3. Initialization of base classes: If your class inherits from a base class, you can use the initialization list to initialize the base class's constructor.
+
+4. Initialization of member objects: If your class has member objects that require initialization, you can use the initialization list to specify their initial values.
+
+**Why cosnt and reference variable requires initialization list**
+
+Const variables and reference variables require initialization lists because they have specific initialization requirements that cannot be fulfilled within the constructor body.
+
+1. Const variables: Const variables must be initialized at the point of their creation and cannot be reassigned later. Since the constructor body is executed after the member variables are default-constructed, you cannot assign a value to a const variable within the constructor body. Therefore, initialization lists provide a way to directly initialize const variables when the object is constructed.
+
+2. Reference variables: Reference variables must be bound to an object when they are created and cannot be re-bound later. Similar to const variables, you cannot assign a value to a reference variable within the constructor body because it would be too late. The initialization list allows you to initialize reference variables with the desired object immediately upon construction.
+
+--------
+
+- **For initialization of member objects which do not have default constructor:** 
+In the following example, an object “a” of class “A” is data member of class “B”, and “A” doesn’t have default constructor. Initializer List must be used to initialize “a”.
+
+
+```
+#include <iostream>
+using namespace std;
+ 
+class A {
+    int i;
+public:
+    A(int );
+};
+ 
+A::A(int arg) {
+    i = arg;
+    cout << "A's Constructor called: Value of i: " << i << endl;
+}
+ 
+// Class B contains object of A
+class B {
+    A a;
+public:
+    B(int );
+};
+ 
+B::B(int x):a(x) {  //Initializer list must be used
+    cout << "B's Constructor called";
+}
+ 
+int main() {
+    B obj(10);
+    return 0;
+```
+
+Similarly base class var can be set 
+
+
+- **When constructor’s parameter name is same as data member** 
+If constructor’s parameter name is same as data member name then the data member must be initialized either using this pointer or Initializer List. In the following example, both member name and parameter name for A() is “i”.
+
+- **For Performance reasons:** 
+It is better to initialize all class variables in Initializer List instead of assigning values inside body. Consider the following example: 
+
+```
+// Without Initializer List
+class MyClass {
+    Type variable;
+public:
+    MyClass(Type a) {  // Assume that Type is an already
+                     // declared class and it has appropriate
+                     // constructors and operators
+      variable = a;
+    }
+};
+```
+
+Here compiler follows following steps to create an object of type MyClass 
+1. Type’s constructor is called first for “a”. 
+
+2. Default construct “variable”
+3. The assignment operator of “Type” is called inside body of MyClass() constructor to assign 
+
+    variable = a;
+4. And then finally destructor of “Type” is called for “a” since it goes out of scope.
+
+
+
+Now consider the same code with MyClass() constructor with Initializer List 
+
+```
+// With Initializer List
+class MyClass {
+    Type variable;
+public:
+    MyClass(Type a):variable(a) {   // Assume that Type is an already
+                     // declared class and it has appropriate
+                     // constructors and operators
+    }
+};
+```
+
+With the Initializer List, the following steps are followed by compiler: 
+1. Type’s constructor is called first for “a”. 
+
+2. Parameterized constructor of “Type” class is called to initialize: variable(a). The arguments in the initializer list are used to copy construct “variable” directly. 
+3. The destructor of “Type” is called for “a” since it goes out of scope.
+As we can see from this example if we use assignment inside constructor body there are three function calls: constructor + destructor + one addition assignment operator call. And if we use Initializer List there are only two function calls: copy constructor + destructor call.
+
