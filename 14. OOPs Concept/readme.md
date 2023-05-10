@@ -397,3 +397,70 @@ Size of class A: 1
 ```
 
 Well, the size of the empty class is not 0. **This is actually to ensure that two different objects will have different addresses.**
+
+
+-----------------------------------------------------
+
+
+
+## Dynamic Allocaton
+
+Refresher: to create int dynamiclly
+```
+int *i = new int;
+```
+- pointer points to 4 bytes in heap(dynamic memory)
+
+
+For object:
+```
+Hero *h = new Hero;
+```
+- Creates a Hero type pointer which points to 8 bytes (as seen in example) in Heap memory which was allocated for it
+
+
+
+Now to use the object:
+
+```
+Hero *b = new Hero;
+b->setLevel('A');
+b->setHealth(70);
+cout << "level is  " << (*b).level << endl;
+cout << " health is " << (*b).getHealth() << endl;
+
+// OR
+cout << "level is  " << b->level << endl;
+cout << " health is " << b->getHealth() << endl;
+```
+
+
+
+
+
+----------------------------------------
+
+- whenever we create an obj a constructor is called
+- It invokes at object creation
+- No i/p parameter
+
+
+ie Whenever we do Hero ramesh it is done as ramesh.Hero()
+- It is same whether called statically or dynamically
+
+
+## This keyword
+
+
+for example 
+
+```
+class smth {
+    int x;
+    smth(int x) {
+        x = x;
+    }
+}
+```
+
+As we can see the name of the variable is same (x)
