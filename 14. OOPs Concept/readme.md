@@ -872,3 +872,6 @@ cout<<Hero::TimeToComplete;
 - static functions doesnt have *this keyword* as this is a pointer to current object.
 - STATIC FUNCTIONS CAN ACCESS ONLY THE STATIC MEMBERS
 - **Therefore it cant access the noraml data members of the class**
+
+
+Refer readme of lec 2 for important concept of OOPs

@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// Just for concept, cant say anthing specific for encapsulation
 class Student
 {
 
