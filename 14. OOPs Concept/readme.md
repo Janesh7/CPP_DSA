@@ -21,7 +21,7 @@ Some IMP points to remember
 - getter used for returning the value/ reading
 - setter used to modify the value, certain conditions can be used
 
-## Padding and allignment
+# Padding and allignment
 
 We know that a struct size is not only the summation of all the data members, rather it's the minimum sum guaranteed. **The compiler adds some padding for data member alignment.**
 
@@ -73,7 +73,7 @@ Size of the class should be sum of all the non-static data member+ padding, whic
 Above is the alignment of class A and that's why the size of the class is 8 Bytes. **Static data members and member functions have no contribution.**
 
 
-## How compiler adds padding?
+# How compiler adds padding?
 
 Now the question is how compiler adds padding and align? The method is compiler dependent and kind of greedy. **It aligns till the boundary of maximum memory allocated.**
 
@@ -86,7 +86,7 @@ Here we find that max memory allocated is 8 Bytes, thus all the data members acq
 
 The answer is no. **It will try to align optimally keeping the same order.** Check the example next
 
-## Size of a derived class
+# Size of a derived class
 
 
 **What is the size of a derived class? Of course, a derived class has all data members of the base class it inherits and does it has its own copied of those data members too. Thus size should be the size of base class data members + size of derived class data members.**
@@ -284,7 +284,7 @@ Just changing the order of member we found that derived class is having size 12 
 Above is the alignment for the Derived class and now the size is 12 Bytes, instead of 16 because of the above alignment. We saw that compiler keeps aligning greedily & that's why it aligned char b of base class member & char d, which is its member, in the same row. When it tried to align int c, it could not as only 2 bytes were left. But instead of int, if it was char only then it would have aligned in the same line.
 
 
-## The virtual keyword and its effect on size
+# The virtual keyword and its effect on size
 
 We know in the derived class it can inherit the base class as virtual too. What would be the size of the derived class in that case? Will there be any changes?
 
@@ -403,7 +403,7 @@ Well, the size of the empty class is not 0. **This is actually to ensure that tw
 
 
 
-## Dynamic Allocaton
+# Dynamic Allocaton
 
 Refresher: to create int dynamiclly
 ```
@@ -452,7 +452,7 @@ ie Whenever we do Hero ramesh it is done as ramesh.Hero()
 - It is same whether called statically or dynamically
 
 
-## This keyword
+# This keyword
 
 
 for example 
@@ -850,3 +850,25 @@ With the Initializer List, the following steps are followed by compiler:
 3. The destructor of “Type” is called for “a” since it goes out of scope.
 As we can see from this example if we use assignment inside constructor body there are three function calls: constructor + destructor + one addition assignment operator call. And if we use Initializer List there are only two function calls: copy constructor + destructor call.
 
+# Static keyword
+
+- BELONGS TO CLASS
+- NO NEED TO CREATE AN OBJECT TO ACCESS IT.
+- static keyword
+- To initialize an static member without an obj
+
+```
+datatype class_name::data_member_name = value;
+int Hero::TimeToComplete = 1;
+// access
+cout<<Hero::TimeToComplete;
+```
+- U can use an object to call the static member like a.TimeToComplete but ITS NOT RECOMMENDED TO do this as it doesnt belong to an object but belongs to a class.
+
+
+**Static functions**
+
+- Doesnt need an object to use the function rather use class
+- static functions doesnt have *this keyword* as this is a pointer to current object.
+- STATIC FUNCTIONS CAN ACCESS ONLY THE STATIC MEMBERS
+- **Therefore it cant access the noraml data members of the class**
