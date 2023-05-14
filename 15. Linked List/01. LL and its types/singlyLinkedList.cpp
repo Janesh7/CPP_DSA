@@ -27,6 +27,7 @@ class Node {
 
 };
 
+// When doing any operation on Linked list send the Address of the Node Pointer ALWAYS, As we want to DO THE CHANGES IN THE MAIN LL ONLY AND DONT WANT TO CREATE A COPY
 void insertAtHead(Node* &head, int d) {
 
     // new node create
@@ -39,7 +40,8 @@ void insertAtTail(Node* &tail, int d) {
      // new node create
     Node* temp = new Node(d);
     tail -> next = temp;
-    tail  = temp;
+    tail 
+     = temp;
 }
 
 void print(Node* &head) {
