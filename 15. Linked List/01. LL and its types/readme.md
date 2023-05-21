@@ -42,3 +42,5 @@ Creating a node
 - or we have to traverse through
 
 IMP NOTE: **ALWAYS before deleting the node, remove the pointer to the next node as we r only freeing the memory and not removing the ptr** and it would be delete the whole list.
+
+- Make a head pointer and a tail pointer and make add/del at head/tail and reuse the function for the same
