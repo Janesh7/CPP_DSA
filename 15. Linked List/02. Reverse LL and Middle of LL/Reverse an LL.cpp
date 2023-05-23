@@ -78,6 +78,7 @@ void reverse(LinkedListNode<int>* &head,LinkedListNode<int>* cur,LinkedListNode<
     }
 
     LinkedListNode<int>* forward = cur->next;
+    // it works if u swap the below two statements
     reverse(head,forward,cur);
     cur-> next = prev;
 }
