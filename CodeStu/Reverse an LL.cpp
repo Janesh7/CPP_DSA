@@ -58,6 +58,7 @@ LinkedListNode<int> *reverseLinkedList(LinkedListNode<int> *head)
     LinkedListNode<int>* prev = NULL;
     LinkedListNode<int>* cur=head;
     LinkedListNode<int>* n = NULL;
+    // If we r writing n = head->next in starting and doing similiar stuff, it gives segmentation fault
     while (cur!=NULL) {
         n=cur->next;
         cur->next=prev;
