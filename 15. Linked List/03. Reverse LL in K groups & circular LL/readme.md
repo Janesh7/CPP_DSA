@@ -20,5 +20,5 @@ Now the rest of the LL is reversed similary through recursion and attached to th
 - 1 case solve:
     - Iterative way reverse the LL of K size
     - ie reverse first k nodes
-- head->next = output of recursion
+- head->next = output of recursion will get attached
 - return head of prev LL ie return  prev
