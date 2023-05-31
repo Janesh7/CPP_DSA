@@ -52,3 +52,6 @@ putting in the eqn gives:
 - We are using floyds algo to return the fast ptr 
 - and then we implement this algo to get the start
 
+**We can break the cycle**
+
+- We have the head to the start, just find the prev node and make it point to null
