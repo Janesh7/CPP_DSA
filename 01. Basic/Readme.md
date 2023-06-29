@@ -22,6 +22,10 @@
 <br/>
 <h6>********************************************</h6>
 <b>IMPORTANT:</b> ADD these 3 lines to ur code for increased performance
+
+**#pragma GCC optimize("Ofast")**
+**static auto _ = [] () {ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);return 0;}();**
+
 <b>ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);</b>
