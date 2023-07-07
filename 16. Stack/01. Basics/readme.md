@@ -1,4 +1,5 @@
-# Stack 
+# Stack
+
 - LIFO : Last in first out
 - example plates in a restruant
 
@@ -13,12 +14,13 @@ s.pop();
 s.top();
 s.empty();
 ```
+
 - Every operation in O(1)
 
-Stacks can be implemented using 
+Stacks can be implemented using
+
 - arrays
 - Linked List
-
 
 In arrays the class looks like:
 
@@ -33,3 +35,7 @@ public:
         **arr = new int[size];**
         top = -1;
     }
+
+# Questions
+
+- **Recursion is very useful in stack question.. Also STORE EACH VALUE IN EACH STEP AND LATER PUT IT BACK**
