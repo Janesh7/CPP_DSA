@@ -130,3 +130,24 @@ Ex. {{{{
         (4+1)/2 + (4+1)/2 = 5/2 + 5/2 = 4
     CHANGED TO: {}{}{}{} changed 
     
+
+**Implementing Queue using Stack:**
+
+To implement a queue using a stack, we can use two stacks. One stack will serve as the main storage for elements, and the other stack will be used temporarily for enqueue and dequeue operations.
+
+Here's how the queue operations can be implemented:
+
+1. **Enqueue Operation:**
+   - Simply push the new element onto the main stack.
+
+2. **Dequeue Operation:**
+   - If the second stack is empty, transfer all elements from the first stack to the second stack while popping them.
+   - Pop the top element from the second stack and return it.
+
+3. **Front Operation:**
+   - If the second stack is empty, transfer all elements from the first stack to the second stack while popping them.
+   - Return the top element of the second stack without popping.
+
+4. **Empty Operation:**
+   - Return whether both stacks are empty.
+
