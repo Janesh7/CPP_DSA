@@ -1,3 +1,6 @@
+**VVV IMP**
+
+# Min time to burn a tree from the given node
 
 ### Problem Description
 - Given a binary tree and a target node, you need to find the minimum time it takes to burn the entire tree if the target node is set on fire.
