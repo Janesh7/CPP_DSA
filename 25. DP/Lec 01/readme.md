@@ -7,6 +7,17 @@ Dynamic Programming (DP) is a technique for solving complex problems by breaking
 
 **RECURSIVE REALTION IS V IMP**
 
+**IMP:**
+1. **First solve the problem by recursion [MOST IMP STEP]**
+
+2. **Memoization: Initialize a dp vector, Pass it with function, add the return statement for precomputed stored values in DP array, do same compuation if not alr stored(as in rec func), store the results and then return it**
+
+3. **Tabulation: create a DP array .. do base cases of recursive functions.. iterate it and build upon the array staring from 0.. now convert recursive(n-1,n-2) relation to iterative(i-1,i-2) relation a**
+
+4. **Space optimization: NOT POSSIBLE EVERYTIME Complex to implement ... analyze the realtion ie .. we see i-1,i-2 .. we know that only these 2 values r determine my next solutions so just store these and get solution for each iteration.. many times the solution would depend upon the whole linear array.. so here storing all the values as element is not feasible hence we cant do space opt here**
+
+**NOTE: For Memoization we use recursion only .. hence we go top down(genrally goes n-1,n-2..) and for tabulation we go bottom up(ie i-1,i-2)**
+
 **Types of Dynamic Programming:**
 
 1. **Top-down Approach (Recursion and Memoization):**
