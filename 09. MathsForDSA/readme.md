@@ -15,7 +15,7 @@ we mark 2,3,5,7,11.. multiple as false
 (n/2+n/3+n/5+n/7....) => n(1/2+1/3+1/5....) => n* HP of primes (hp of primes -> log(logn))  // Taylor series
 
 <br />
-<b> therefore complexity => O(n+ log(logn)) </b>
+<b> therefore complexity => O(n*log(logn)) </b>
 
 ## GCD/HCF
 

@@ -17,7 +17,7 @@ Symbol table: is an important ds created by the compiler in order to keep track 
 <datatype> *p -> systanx to create a pointer, the pointer created is pointing to the <datatype>
 <b> * - is a DEREFERENCE OPERATOR , means VALUE OF, ie tell the value in the memory addy</b>
 
-- Size of a pointer of anything is ALWAYS 8 and size of an address is also 8
+- Size of a pointer of anything is ALWAYS 8 bytes and size of an address is also 8 bytes for 64 (2^8) bit system
 
 int *ptr = 0;
 <b>ptr = &i; // NOTE : NO * WHILE POINTING THE ADDRESS</b>
@@ -55,6 +55,8 @@ int main()
     return 0;
 }
 ```
+**IMP**: Let say in for loops etc or normally, arr[i] is broken down as *(arr + i) .. so **i[arr] will also work and not give any error** as it will be *(i + arr) which works.
+**NOTE**: We can't do arr++ or arr=arr+1 because we r trying to do changes in symbol table which isnt possibe 
 
 Some advantages of using Pointers are given below:
 
@@ -376,6 +378,8 @@ The behind the scene process for this is : first abcde is stored in a temp memor
 - char *p = 'abcde';
 
 <b>IMP: VERY BAD PRACTICE: coz 'abcde' is stored in a temporary memory and then the pointer points to that temp memory which is bad.</b>
+
+**Note:** ch = 'a'; char* p = &ch; ch++ will turn it to 'b'
 
 #### Passing a pointer to a function
 ```

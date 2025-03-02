@@ -26,7 +26,7 @@ int countWays(int n, vector<int> &dp) {
 }
 ```
 
-**Time Complexity:** O(n)
+**Time Complexity:** O(2^n)
 **Space Complexity:** O(n)
 
 **2. Bottom-Up Approach (Tabulation):**

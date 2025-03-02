@@ -102,7 +102,7 @@ Using memoization in dynamic programming not only reduces redundant calculations
       return dp[n];
   }
   ```
-  **Time Complexity:** O(n)
+  **Time Complexity:** O(2^n)
   **Space Complexity:** O(n)
 
 - **Space Optimization:**
