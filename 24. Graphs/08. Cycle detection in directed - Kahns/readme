@@ -1,0 +1,71 @@
+Detecting a cycle in a directed graph using Kahn's algorithm (also known as Topological Sort) is a classic problem. This algorithm works by finding a topological ordering of the vertices. If there is a cycle in the graph, it won't be possible to find a topological ordering, as there will be a vertex with an in-degree greater than 0 that cannot be processed.
+
+
+### Algorithm Steps:
+
+1. Create an adjacency list representation of the graph.
+2. Initialize an array to store in-degrees for all vertices. Initially, set the in-degree of all vertices to 0.
+3. Calculate the in-degrees of all vertices by iterating through the edges.
+4. Initialize a queue and add all vertices with an in-degree of 0 to the queue.
+5. Initialize a counter to keep track of the number of processed vertices.
+6. While the queue is not empty, do the following:
+   a. Pop a vertex from the queue.
+   b. Increment the counter.
+   c. For each neighbor of the popped vertex, decrement its in-degree by 1.
+   d. If a neighbor's in-degree becomes 0, add it to the queue.
+7. If the counter is not equal to the number of vertices, there is a cycle in the graph.
+
+### Pseudocode in C++:
+
+```cpp
+bool hasCycle(vector<vector<int>>& edges, int v, int e) {
+    vector<int> inDegree(v, 0);
+    
+    // Calculate in-degrees
+    for (auto edge : edges) {
+        int u = edge[0];
+        int v = edge[1];
+        inDegree[v]++;
+    }
+    
+    queue<int> q;
+    
+    // Add vertices with in-degree 0 to the queue
+    for (int i = 0; i < v; i++) {
+        if (inDegree[i] == 0) {
+            q.push(i);
+        }
+    }
+    
+    int processedVertices = 0;
+    
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+        processedVertices++;
+        
+        // Decrement in-degrees of neighbors
+        for (int v : adjList[u]) {
+            inDegree[v]--;
+            
+            // If in-degree becomes 0, add to queue
+            if (inDegree[v] == 0) {
+                q.push(v);
+            }
+        }
+    }
+    
+    // If all vertices were processed, there is no cycle
+    return processedVertices != v;
+}
+```
+
+### Time Complexity (TC):
+
+The time complexity of this algorithm is O(V + E), where V is the number of vertices and E is the number of edges. This is because we process each vertex and edge once.
+
+### Space Complexity (SC):
+
+The space complexity is O(V) for the in-degree array and O(V + E) for the adjacency list, resulting in a space complexity of O(V + E).
+
+This algorithm can efficiently detect cycles in a directed graph and is often used as a building block for solving various graph-related problems.
